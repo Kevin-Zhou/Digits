@@ -26,15 +26,6 @@ public class BlurredActivity extends Activity {
     Button playAgain;//lets the user play again
     Context context;//needed to start a new intent;
 
-    final Path path = new Path();
-    path.addRoundRect(new RectF(0,0,getWidth(),getHeight()),10,10,Path.Direction.CW);
-
-    @Override
-    protected void dispatchDraw(Canvas canvas){
-        canvas.clipPath(path);
-        super.dispatchDraw(canvas);
-    }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blurred);
