@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen_background">
+    android:background="@drawable/home_gradient">
 
     <TextView
         android:id="@+id/result"
@@ -14,7 +14,7 @@
         android:textSize="24sp"/>
 
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_below="@+id/result"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
     <Button
         android:id="@+id/loopGame"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/time"
+        android:layout_below="@+id/score"
         android:background="@drawable/mybutton"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

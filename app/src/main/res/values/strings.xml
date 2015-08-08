@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Safecracker</string>
+    <string name="app_name">Digits</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_social">Social</string>
+    <string name="title_activity_store">StoreActivity</string>
 </resources>
