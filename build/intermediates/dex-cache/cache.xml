@@ -2,53 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/acme_zx/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-40891bf8bc5b12b883a38b0e1c01ffd43d141d48.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Android Studio Bundle\Contents\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-dc094974ee2424fb083f4963b2a4a00807c39ac9.jar" />
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-8998d1afeb81eed8950858293b111700042b3dac.jar" />
     </item>
     <item
-        jar="/Users/acme_zx/Desktop/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/acme_zx/Desktop/Digits/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-f985d0527ca3219338f6e3643f096845b5b4c80d.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-72b8c7701b1ca1bc76ea4225ae24ba3492641184.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/Desktop/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/acme_zx/Desktop/Digits/app/build/intermediates/pre-dexed/debug/classes-7f330df07a5dee8ce85d08e8b15343d2c1dd6002.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-c56df40c9015ee4606952afe6a90eea86a2d2559.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/Desktop/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/acme_zx/Desktop/Digits/app/build/intermediates/pre-dexed/debug/classes-30f9b679387876eb51b33de7aef5233247b22c54.jar" />
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-6ddaabaf4ac92258f0065e3834b7f2bfa66f98b5.jar" />
     </item>
     <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-a1a962e83149530e9fc93a3ad056071f84d16167.jar" />
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-83b032f8daa3800c9ca9dd3156017f2f905222cc.jar" />
     </item>
 
 </items>

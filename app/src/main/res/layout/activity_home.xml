@@ -30,14 +30,17 @@
             android:background="@drawable/mybutton2"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="start"
+            android:text="Start"
             android:layout_weight="@integer/status_bar_notification_info_maxnum"
             android:id="@+id/startGame"
             android:textColor="#fa08f0c8"
+            android:gravity="center"
             android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
             android:layout_alignParentStart="false"
             android:layout_below="@+id/imageView3"
-            android:layout_marginTop="50dp"
+            android:layout_marginBottom="40dp"
             android:padding="10dp" />
     </RelativeLayout>
 
