@@ -20,14 +20,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions.java" line="56" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3dbc8be-87a3-4da4-ba9b-2c894c9cdb2a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions4.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Home.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions.java" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/SocialActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/amita/safecracker/SocialActivity.java" />
+    <list default="true" id="b3dbc8be-87a3-4da4-ba9b-2c894c9cdb2a" name="Default" comment="It's a start. Good Night!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Safecracker-master-master.iws" />
@@ -109,8 +102,8 @@
       <file leaf-file-name="Instructions3.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41717792" vertical-offset="1666" max-vertical-offset="2329">
-              <caret line="124" column="54" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5214724" vertical-offset="1666" max-vertical-offset="2329">
+              <caret line="126" column="4" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -922,13 +915,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/instructions2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions2.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/instructions3.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions3.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/instructions4.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions4.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/instructions5.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/BlurredActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions5.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions3.java" />
       </list>
     </option>
   </component>
@@ -1327,7 +1320,11 @@
       <created>1439093786561</created>
       <updated>1439093786561</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="It's a start. Good Night!">
+      <created>1439094621990</created>
+      <updated>1439094621990</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1352,11 +1349,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="683" y="0" width="683" height="728" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32906765" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32906765" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32906765" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1365,7 +1362,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30612245" sideWeight="0.5514372" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30530164" sideWeight="0.5514372" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38025594" sideWeight="0.49848714" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1694,8 +1691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amita/safecracker/Instructions3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41717792" vertical-offset="1666" max-vertical-offset="2329">
-          <caret line="124" column="54" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5214724" vertical-offset="1666" max-vertical-offset="2329">
+          <caret line="126" column="4" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
           <folding />
         </state>
       </provider>

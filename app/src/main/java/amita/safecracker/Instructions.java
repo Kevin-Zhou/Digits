@@ -57,10 +57,8 @@ public class Instructions extends Activity {
 
         start.setTextSize((int) (0.03 * getWidth()));
         start.setTypeface(tf_light);
-       // welcome.setTextColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
       //  onClick();//what happens if you click the button
     }
-
 
 
     private void scaleImage(ImageView view, int boundBoxInDp)
@@ -111,7 +109,7 @@ public class Instructions extends Activity {
         if (event.getAction() == MotionEvent.ACTION_UP ) {
 
                          System.out.println("HEYYYYYY");
-            Intent i= new Intent(context,MainActivity.class);
+            Intent i= new Intent(context,Instructions2.class);
             startActivity(i);
         }
         return true;
