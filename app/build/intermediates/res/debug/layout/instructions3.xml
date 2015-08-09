@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/sample_game"
+
+    android:id="@+id/fullScreenLayout">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topClouds"
+        android:src="@drawable/clouds_on_top1"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tap"
+        android:src="@drawable/number_tap"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        android:adjustViewBounds="true"
+         />
+
+    <TextView
+        android:id="@+id/swipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe to Check Numbers"
+        android:fontFamily="font"
+        android:layout_below="@+id/guess"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+      />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Guess the Code!"
+        android:id="@+id/guess"
+        android:textColor="#ff437863"
+        android:layout_centerHorizontal="true"
+         />
+
+</RelativeLayout><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/instructions3.xml -->

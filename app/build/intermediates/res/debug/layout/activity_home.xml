@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:background="@drawable/home_gradient"
+    android:nestedScrollingEnabled="true"
+    android:id="@+id/fullScreenLayout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView3"
+            android:src="@drawable/hero"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+       />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:layout_weight="@integer/status_bar_notification_info_maxnum"
+            android:id="@+id/startGame"
+            android:textColor="#fa08f0c8"
+            android:gravity="center"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginBottom="40dp"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+
+</LinearLayout><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/activity_home.xml -->
