@@ -43,6 +43,26 @@
             android:screenOrientation="portrait"
             android:label="@string/title_activity_store" >
         </activity>
+        <activity
+            android:name=".Instructions2"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name=".Instructions3"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name=".Instructions4"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name=".Instructions5"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_store" >
+        </activity>
     </application>
 
 </manifest>
