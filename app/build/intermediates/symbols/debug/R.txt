@@ -461,11 +461,11 @@ int id always 0x7f0c0018
 int id beginning 0x7f0c0015
 int id button 0x7f0c005f
 int id buttonPanel 0x7f0c0038
-int id buttons 0x7f0c0052
-int id c1 0x7f0c0055
-int id c2 0x7f0c0056
-int id c3 0x7f0c0057
-int id c4 0x7f0c0058
+int id buttons 0x7f0c0057
+int id c1 0x7f0c0053
+int id c2 0x7f0c0054
+int id c3 0x7f0c0055
+int id c4 0x7f0c0056
 int id cancel_action 0x7f0c006f
 int id checkbox 0x7f0c003a
 int id chronometer 0x7f0c005e
@@ -508,7 +508,7 @@ int id multiply 0x7f0c0020
 int id never 0x7f0c001b
 int id none 0x7f0c0010
 int id normal 0x7f0c000c
-int id numberCircles 0x7f0c0054
+int id numberCircles 0x7f0c0052
 int id numbers 0x7f0c0068
 int id parentPanel 0x7f0c002f
 int id progress_circular 0x7f0c0005
@@ -516,7 +516,7 @@ int id progress_horizontal 0x7f0c0006
 int id radio 0x7f0c003c
 int id ready 0x7f0c006d
 int id result 0x7f0c0059
-int id score 0x7f0c0053
+int id score 0x7f0c0058
 int id screen 0x7f0c0021
 int id scrollView 0x7f0c0034
 int id search_badge 0x7f0c0046

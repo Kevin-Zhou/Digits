@@ -1600,11 +1600,11 @@ containing a value of this type.
         public static final int beginning=0x7f0c0015;
         public static final int button=0x7f0c005f;
         public static final int buttonPanel=0x7f0c0038;
-        public static final int buttons=0x7f0c0052;
-        public static final int c1=0x7f0c0055;
-        public static final int c2=0x7f0c0056;
-        public static final int c3=0x7f0c0057;
-        public static final int c4=0x7f0c0058;
+        public static final int buttons=0x7f0c0057;
+        public static final int c1=0x7f0c0053;
+        public static final int c2=0x7f0c0054;
+        public static final int c3=0x7f0c0055;
+        public static final int c4=0x7f0c0056;
         public static final int cancel_action=0x7f0c006f;
         public static final int checkbox=0x7f0c003a;
         public static final int chronometer=0x7f0c005e;
@@ -1647,7 +1647,7 @@ containing a value of this type.
         public static final int never=0x7f0c001b;
         public static final int none=0x7f0c0010;
         public static final int normal=0x7f0c000c;
-        public static final int numberCircles=0x7f0c0054;
+        public static final int numberCircles=0x7f0c0052;
         public static final int numbers=0x7f0c0068;
         public static final int parentPanel=0x7f0c002f;
         public static final int progress_circular=0x7f0c0005;
@@ -1655,7 +1655,7 @@ containing a value of this type.
         public static final int radio=0x7f0c003c;
         public static final int ready=0x7f0c006d;
         public static final int result=0x7f0c0059;
-        public static final int score=0x7f0c0053;
+        public static final int score=0x7f0c0058;
         public static final int screen=0x7f0c0021;
         public static final int scrollView=0x7f0c0034;
         public static final int search_badge=0x7f0c0046;

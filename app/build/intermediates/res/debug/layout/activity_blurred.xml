@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-  <RelativeLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,108 +9,80 @@
     android:layout_gravity="center_vertical|center|center_horizontal">
 
 
-<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    android:clickable="false"
-    android:layout_gravity="center_vertical|center|center_horizontal"
-    android:background="#01ffffff">
-
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/number_screen"
-        android:layout_alignParentBottom="true"
         android:clickable="false"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_centerVertical="true" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:paddingTop="175dp"
-        android:id="@+id/buttons"
-        android:layout_above="@+id/score"
-        android:gravity="center_vertical|center|center_horizontal"
-        android:layout_alignParentBottom="true"
-        >
-                    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberCircles"
-        android:gravity="center_vertical|center|center_horizontal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_below="@+id/score"
-        android:layout_centerVertical="true"
-        android:paddingBottom="225dp"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/c1"
-            android:textSize="25dp"
-            android:textAlignment="center"
-            android:gravity="center_vertical|center|center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/c2"
-            android:textSize="25dp"
-            android:textAlignment="center"
-            android:gravity="center_vertical|center|center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/c3"
-            android:textSize="25dp"
-            android:textAlignment="center"
-            android:gravity="center_vertical|center|center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/c4"
-            android:textSize="25dp"
-            android:textAlignment="center"
-            android:gravity="center_vertical|center|center_horizontal" />
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="120dp"
-        android:text="RESULT"
-        android:layout_below="@+id/score"
-        android:fontFamily="font"
-        android:focusableInTouchMode="true"
-        android:visibility="visible"
-        android:layout_alignBaseline="@+id/imageView"
         android:layout_centerInParent="true" />
 
-    <TextView
-        android:id="@+id/score"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/numberCircles"
+        android:transitionGroup="false"
+        android:focusableInTouchMode="false"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/c1"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/c2"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/c3"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/c4"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttons"></LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="170"
-        android:fontFamily="font" />
+        android:id="@+id/score"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="0dp"
+        android:layout_above="@+id/buttons" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:id="@+id/result"
+        android:layout_below="@+id/numberCircles"
+        android:layout_centerHorizontal="true" />
 
-
-</RelativeLayout>
-    </RelativeLayout><!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits-master/Digits/app/src/main/res/layout/activity_blurred.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits-master/Digits/app/src/main/res/layout/activity_blurred.xml -->

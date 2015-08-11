@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
@@ -97,22 +98,25 @@ public class MainActivity extends Activity {
         roundedRect=(ImageView)findViewById(R.id.imageView2);
         roundedRect.setBackgroundResource(R.drawable.roundedrectangle);
         checkmarkImage=new ImageView(this);
-        checkmarkImage.setBackgroundResource(R.drawable.checkmark);
+        checkmarkImage.setImageDrawable(getResources().getDrawable(R.drawable.checkmark3x));
+
+
+        //checkmarkImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) layout.getLayoutParams();
-        params.setMargins((int)(0.020833333*width) + (int) ((0.094444 * width) / 2), (int)(0.030394415*height)+(int)((0.013961605*height)/2), 0, 0); //1280 20
+        params.setMargins((int)(0.066666*width)+(int) ((0.094444 * width) / 2), (int)(0.030394415*height)+(int)((0.013961605*height)/2), 0, 0); //1280 20
 
         RelativeLayout.LayoutParams params2 = (RelativeLayout.LayoutParams) chronometer.getLayoutParams();
-        params2.setMargins((int) (0.045375218*height), (int)(0.012394415*height), 0, 0); //1280 1
+        params2.setMargins((int) (0.05375218*height), (int)(0.032394415*height), 0, 0); //1280 1
         layout.setLayoutParams(params);
         RelativeLayout.LayoutParams params3 = (RelativeLayout.LayoutParams) roundedRect.getLayoutParams();
-        params3.setMargins((int)(0.020833333*width),(int)(0.030394415*height),0,0);
+        params3.setMargins((int)(0.066666*width),(int)(0.030394415*height),0,0);
         RelativeLayout.LayoutParams params4 = (RelativeLayout.LayoutParams) circlesGridLayout.getLayoutParams();
         params4.setMargins((int)(0.0555555555*width),(int)(0.030394415*height)+(int)((0.013961605*height)/2),0,0); //MAKE CIRCLES SIZE RELATIVE TO WIDTH
         circlesGridLayout.setLayoutParams(params4);
-        System.out.println("HEIGHTTT: "+height);
+        System.out.println("WIDTHWIDTHWIDTHWIDTH: "+width);
         roundedRect.setLayoutParams(params3);
 
-       //layout.setBackgroundResource(R.drawable.image339);
+        //layout.setBackgroundResource(R.drawable.image339);
         chronometer.setLayoutParams(params2);
         context = this;
         submitButton = (Button) findViewById(R.id.button);
@@ -132,7 +136,7 @@ public class MainActivity extends Activity {
             textview.setWidth((int) (width * 0.175)); //this is where I set the width of the cells
             textview.setHeight((int) (0.082024432 * height)); //1280 87, 2560 174
             System.out.print("Height: ");
-            System.out.println(getStatusBarHeight());
+            System.out.println(height);
             textview.setGravity(Gravity.CENTER);
 
             //by the way, to set the height of entire grid, you can go into the xml and change the height of the gridlayout
@@ -153,7 +157,7 @@ public class MainActivity extends Activity {
             linearlayout.setOrientation(LinearLayout.VERTICAL);
             android.view.ViewGroup.LayoutParams layoutParamss = roundedRect.getLayoutParams();
             layoutParamss.height = ((int) (0.082029432 * height));
-            layoutParamss.width=((int) (0.052924432 * width));
+            layoutParamss.width=((int) (0.08 * width));
             linearlayout.setLayoutParams(layoutParamss);
             linearlayout.setVerticalGravity(Gravity.CENTER_VERTICAL);
             linearlayouts[counter]=linearlayout;
@@ -162,12 +166,16 @@ public class MainActivity extends Activity {
 
         }
         linearlayouts[9].addView(checkmarkImage);
+        LinearLayout.LayoutParams paramz = (LinearLayout.LayoutParams) checkmarkImage.getLayoutParams();
+        paramz.width=((int) (0.035 * width));
+        checkmarkImage.setLayoutParams(paramz);
+        checkmarkImage.setAdjustViewBounds(true);
         android.view.ViewGroup.LayoutParams layoutParams = roundedRect.getLayoutParams();
 
         layoutParams.width = ((int) (width * 0.175))*4 +(int)(0.094444*width);
         layoutParams.height = ((int) (0.082024432 * height))*10 + (int)(0.013961605*height);
         roundedRect.setLayoutParams(layoutParams);
-       // roundedRect.getLayoutParams().height=(layout.getHeight()+5);
+        // roundedRect.getLayoutParams().height=(layout.getHeight()+5);
         //roundedRect.setMaxHeight(layout.getHeight()+5);
         for (int counter = 0; counter < 36; counter++) {
             textviews[counter].setText(" ");
@@ -213,7 +221,7 @@ public class MainActivity extends Activity {
                     //once the user clicks submit, the program will look through their answer
                     linearlayouts[10-currentRow].removeView(checkmarkImage);
                     if (currentRow<10){
-                    linearlayouts[9-currentRow].addView(checkmarkImage);}
+                        linearlayouts[9-currentRow].addView(checkmarkImage);}
                     int numCorrect = 0; //stores how many digits are right but in the wrong position (empty circle)
                     int numExactlyCorrect = 0; //stores how many digits are in the right position (filled in circle)
                     int[] ansDigits = new int[4]; //array to store the digits of the answer
@@ -272,7 +280,7 @@ public class MainActivity extends Activity {
                                 intent.putExtra("val", 2);//sends the class info that the user won
                                 intent.putExtra("time", elapsedMillis);
                                 String ans=String.valueOf(digits[0])+String.valueOf(digits[1])+String.valueOf(digits[2])+String.valueOf(digits[3]);
-                               intent.putExtra("answer", ans);
+                                intent.putExtra("answer", ans);
                                 startActivity(intent);
                                 finish();
 
@@ -283,26 +291,26 @@ public class MainActivity extends Activity {
                     System.out.println(numCorrect);
                     int numCircles=numExactlyCorrect+numCorrect;
 
-                        for (int counter2=0;counter2<numExactlyCorrect;counter2++)
-                        {
-                            circleImage=new ImageView(context);
-                            circleImage.setBackgroundResource(R.drawable.filledcircle);
-                            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                            if (counter2!=0){
-                                lp.setMargins(0,(int)(0.00606504*height),0,0);}
-                            circleImage.setLayoutParams(lp);
-                            linearlayouts[10-(currentRow)].addView(circleImage);
-                        }
-                        for (int counter2=0;counter2<numCorrect;counter2++)
-                        {
-                            circleImage=new ImageView(context);
-                            circleImage.setBackgroundResource(R.drawable.unfilledcircle);
-                            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                            if (counter2!=0 || numExactlyCorrect>0){
-                                lp.setMargins(0,(int)(0.00606504*height),0,0);}
-                            circleImage.setLayoutParams(lp);
-                            linearlayouts[10-(currentRow)].addView(circleImage);
-                        }
+                    for (int counter2=0;counter2<numExactlyCorrect;counter2++)
+                    {
+                        circleImage=new ImageView(context);
+                        circleImage.setBackgroundResource(R.drawable.filledcircle);
+                        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                        if (counter2!=0){
+                            lp.setMargins(0,(int)(0.00606504*height),0,0);}
+                        circleImage.setLayoutParams(lp);
+                        linearlayouts[10-(currentRow)].addView(circleImage);
+                    }
+                    for (int counter2=0;counter2<numCorrect;counter2++)
+                    {
+                        circleImage=new ImageView(context);
+                        circleImage.setBackgroundResource(R.drawable.unfilledcircle);
+                        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                        if (counter2!=0 || numExactlyCorrect>0){
+                            lp.setMargins(0,(int)(0.00606504*height),0,0);}
+                        circleImage.setLayoutParams(lp);
+                        linearlayouts[10-(currentRow)].addView(circleImage);
+                    }
 
 
                     currentRow++; //increment the current row by 1
@@ -426,7 +434,7 @@ public class MainActivity extends Activity {
         Random random = new Random();
         num = random.nextInt(5);
         while (num == previousNum) {
-             num = random.nextInt(5);
+            num = random.nextInt(5);
             System.out.println("We accidentally chose the same bg twice in a row, switching it up right now");
         }
         currentGradient = String.valueOf(gradients[num][2]); // Send to BlurredActivity.java
@@ -434,7 +442,7 @@ public class MainActivity extends Activity {
         View layout = findViewById(R.id.fullScreenLayout);
         GradientDrawable gd = new GradientDrawable(
                 GradientDrawable.Orientation.TOP_BOTTOM,
-               gradients[num]);
+                gradients[num]);
         layout.setBackgroundDrawable(gd);
         previousNum = num;
         SharedPreferences.Editor editor = prefs.edit();
