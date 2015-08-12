@@ -111,6 +111,7 @@ public class Instructions extends Activity {
                          System.out.println("HEYYYYYY");
             Intent i= new Intent(context,Instructions2.class);
             startActivity(i);
+            finish();
         }
         return true;
     }

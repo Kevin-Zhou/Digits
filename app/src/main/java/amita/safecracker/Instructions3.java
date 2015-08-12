@@ -61,12 +61,12 @@ public class Instructions3 extends Activity {
 
         //does textstuff, copied from Kevin's code, sets, size, font, and color
 
-        guess.setTextSize((int) (0.06 * getWidth()));
+        guess.setTextSize((int) (0.03 * getWidth()));
         guess.setTypeface(tf_light);
         guess.setTypeface(guess.getTypeface(),Typeface.BOLD);
         guess.setTextColor(Color.parseColor("#ff437863"));
 
-        swipe.setTextSize((int) (0.03 * getWidth()));
+        swipe.setTextSize((int) (0.02 * getWidth()));
         swipe.setTypeface(tf_light);
         swipe.setTextColor(Color.parseColor("#ff437863"));
         swipe.setTypeface( swipe.getTypeface(),Typeface.BOLD);
@@ -124,6 +124,7 @@ public class Instructions3 extends Activity {
                          System.out.println("HEYYYYYY");
             Intent i= new Intent(context,Instructions4.class);
             startActivity(i);
+            finish();
         }
         return true;
     }

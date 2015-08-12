@@ -68,12 +68,12 @@ public class Instructions5 extends Activity {
 
         //does textstuff, copied from Kevin's code, sets, size, font, and color
 
-        ready.setTextSize((int) (0.06 * getWidth()));
+        ready.setTextSize((int) (0.03 * getWidth()));
         ready.setTypeface(tf_light);
         ready.setTypeface(ready.getTypeface(),Typeface.BOLD);
         ready.setTextColor(Color.parseColor("#ff437863"));
 
-        start.setTextSize((int) (0.03 * getWidth()));
+        start.setTextSize((int) (0.02 * getWidth()));
         start.setTypeface(tf_light);
        start.setTextColor(Color.parseColor("#ff437863"));
         start.setTypeface( start.getTypeface(),Typeface.BOLD);

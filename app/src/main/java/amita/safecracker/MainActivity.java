@@ -281,9 +281,11 @@ public class MainActivity extends Activity {
                                 intent.putExtra("time", elapsedMillis);
                                 String ans=String.valueOf(digits[0])+String.valueOf(digits[1])+String.valueOf(digits[2])+String.valueOf(digits[3]);
                                 intent.putExtra("answer", ans);
+                                long scoreVal= 100000000/(long)(elapsedMillis)*(long)(currentRow);//this is the score, to be sent to the next activity
+                                intent.putExtra("scoreV", scoreVal);
                                 startActivity(intent);
                                 finish();
-
+                                //10000/time*rowsused
                             }
                         });
                     }
@@ -342,8 +344,11 @@ public class MainActivity extends Activity {
                                 intent.putExtra("time", elapsedMillis);
                                 String ans=String.valueOf(digits[0])+String.valueOf(digits[1])+String.valueOf(digits[2])+String.valueOf(digits[3]);
                                 intent.putExtra("answer", ans);
+                                long scoreVal= 0;
+                                intent.putExtra("scoreV", scoreVal);
                                 startActivity(intent);
                                 finish();
+
                             }
                         });
                     }
