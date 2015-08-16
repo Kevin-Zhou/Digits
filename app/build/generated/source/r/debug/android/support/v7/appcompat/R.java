@@ -451,7 +451,7 @@ public final class R {
 		public static final int buttonPanel = 0x7f0e004b;
 		public static final int cancel_action = 0x7f0e00a4;
 		public static final int checkbox = 0x7f0e004d;
-		public static final int chronometer = 0x7f0e0073;
+		public static final int chronometer = 0x7f0e0072;
 		public static final int collapseActionView = 0x7f0e0019;
 		public static final int contentPanel = 0x7f0e0046;
 		public static final int custom = 0x7f0e004a;

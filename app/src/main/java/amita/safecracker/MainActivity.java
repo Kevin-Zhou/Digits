@@ -11,11 +11,13 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.media.MediaPlayer;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.Gravity;
@@ -79,11 +81,26 @@ public class MainActivity extends Activity {
     static String currentAccent;
     int num = 0;
     int previousNum = 0;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
+     MediaPlayer loop;
+    MediaPlayer click;
+    MediaPlayer submit;
+    Boolean playingLoop = false;
 
     @Override
     protected void onResume() {
         super.onResume();
+        try {
+            if (playingLoop == false) {
+                loop = MediaPlayer.create(this, R.raw.loop);
+                loop.setLooping(true);
+                loop.start();
+                playingLoop = true;
+            }
+        } catch (IllegalStateException e) {
 
+        }
         // Logs 'install' and 'app activate' App Events.
       //  AppEventsLogger.activateApp(this);
     }
@@ -91,7 +108,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        try {
+            if (playingLoop == true) {
+                loop.stop();
+                playingLoop = false;
+            }
+        } catch (IllegalStateException e) {
 
+        }
         // Logs 'app deactivate' App Event.
 //        AppEventsLogger.deactivateApp(this);
     }
@@ -103,6 +127,10 @@ public class MainActivity extends Activity {
 
         updateBG(); // Makes new BG gradient
 
+        // Loads sound effects
+        loop = MediaPlayer.create(getApplicationContext(), R.raw.loop);
+        submit = MediaPlayer.create(getApplicationContext(), R.raw.submit);
+        click = MediaPlayer.create(getApplicationContext(), R.raw.click);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -221,6 +249,15 @@ public class MainActivity extends Activity {
         digits[3] = dig4;
         System.out.println(randomNum);
         clickSubmit(); //when the submit button is clicked
+
+        try {
+            // Play background music
+            loop.setLooping(true);
+            loop.start();
+            playingLoop = true;
+        } catch (IllegalStateException e) {
+
+        }
     }
 
     public static float convertPixelsToDp(float px, Context context) {
@@ -346,6 +383,9 @@ public class MainActivity extends Activity {
                     }
                     //if the current row is greater than 10 and they still haven't won yet, they've lost
                     if (won == false && currentRow > 10) {
+                        editor = prefs.edit();
+                        editor.putInt("lost", 1); // value to store
+                        editor.commit();
                         lost = true;
                         System.out.println("BOO YOU LOST");
                         chronometer.stop();
@@ -366,11 +406,21 @@ public class MainActivity extends Activity {
                                 intent.putExtra("scoreV", scoreVal);
                                 startActivity(intent);
                                 finish();
-
                             }
                         });
                     }
                 }
+
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            // Play submit sound effect
+                            submit.start();
+                        } catch (IllegalStateException e) {
+
+                        }
+                    }
+                }).start();
             }
         });
     }
@@ -393,9 +443,37 @@ public class MainActivity extends Activity {
                 if (inViewInBounds(textviews[counter], x, y)) {
                     int num = Integer.parseInt(textviews[counter].getText().toString()); //take the number in the texview
                     if (num == 9) { //if the number of equal to 9 set it back to 0
+                        try {
                         textviews[counter].setText("0");
+                            new Thread(new Runnable() {
+                                public void run() {
+                                    try {
+                                        // Play click sound effect
+                                        click.start();
+                                    } catch (IllegalStateException e) {
+
+                                    }
+                                }
+                            }).start();
+                        } catch (IllegalStateException e) {
+
+                        }
                     } else { //if it isn't equal to 9, increment it up by 1
+                        try {
                         textviews[counter].setText(Integer.toString(num + 1));
+                            new Thread(new Runnable() {
+                                public void run() {
+                                    try {
+                                        // Play click sound effect
+                                        click.start();
+                                    } catch (IllegalStateException e) {
+
+                                    }
+                                }
+                            }).start();
+                        } catch (IllegalStateException e) {
+
+                        }
                     }
                 }
             }
@@ -451,7 +529,7 @@ public class MainActivity extends Activity {
     // This method picks a new BG gradient and draws it
     public void updateBG() {
         // SharedPreferences stores variables in memory
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
         num = prefs.getInt("num", 0);
         previousNum = prefs.getInt("previousNum", 0);
@@ -471,7 +549,7 @@ public class MainActivity extends Activity {
                 currentGradient);
         layout.setBackgroundDrawable(gd);
         previousNum = num;
-        SharedPreferences.Editor editor = prefs.edit();
+     editor = prefs.edit();
         editor.putInt("num", num); // value to store
         editor.putInt("previousNum", previousNum); // value to store
         editor.putInt("currentGradient1", currentGradient[0]); // value to store

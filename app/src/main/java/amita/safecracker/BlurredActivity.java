@@ -13,6 +13,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -101,6 +102,27 @@ public class BlurredActivity extends Activity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     protected void onCreate(Bundle savedInstanceState) {
+        int lost;
+        prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+        lost = prefs.getInt("lost", 0);
+        if (lost == 1) {
+            try {
+                // Play lost sound effect
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.lose);
+                mp.start();
+            } catch (IllegalStateException e) {
+
+            }
+        } else {
+            try {
+                // Play lost sound effect
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.win);
+                mp.start();
+            } catch (IllegalStateException e) {
+
+            }
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blurred);
         BlurBehind.getInstance()
@@ -201,6 +223,13 @@ public class BlurredActivity extends Activity {
                 //the game goes on until the current row is smaller than or equal to 10 and if the player hasn't won or lost yet
                 Intent i = new Intent(context, MainActivity.class);
                 startActivity(i);
+                try {
+                    // Play click sound effect
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.next_level);
+                    mp.start();
+                } catch (IllegalStateException e) {
+
+                }
                 finish();//ends current activity
             }
         });
