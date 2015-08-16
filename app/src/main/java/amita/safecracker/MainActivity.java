@@ -251,6 +251,7 @@ public class MainActivity extends Activity {
         clickSubmit(); //when the submit button is clicked
 
         try {
+            loop.setVolume(0.3f, 0.3f);
             // Play background music
             loop.setLooping(true);
             loop.start();
