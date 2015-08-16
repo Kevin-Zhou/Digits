@@ -13,23 +13,32 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by Twins on 24/07/2015.
  */
 public class Home extends Activity {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "yBo3DqaGXDbcE3cGugMDRQwKK";
+    private static final String TWITTER_SECRET = "LQWF2vrV1e0bPzEfPVF8bLhBj6fstEQraSwGs8RrrjrkGcdZJz";
+
     TextView playAgain;//lets the user play again
     Context context;//needed to start a new intent;
     ImageView pic;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_home);
         playAgain = (TextView) findViewById(R.id.startGame);
         context=this;//activity is a subclass of context

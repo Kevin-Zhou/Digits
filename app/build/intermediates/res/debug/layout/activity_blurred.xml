@@ -89,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bestScore"
+
         android:paddingBottom="10dp"
         android:layout_centerHorizontal="true" />
     <Button
@@ -96,4 +97,4 @@
         android:layout_height="10dp"
         android:id="@+id/loopGame"/>
 
-</RelativeLayout><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/activity_blurred.xml -->
+</RelativeLayout><!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/layout/activity_blurred.xml -->

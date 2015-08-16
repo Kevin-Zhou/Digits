@@ -31,7 +31,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.facebook.appevents.AppEventsLogger;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -74,9 +75,26 @@ public class MainActivity extends Activity {
     int[] gradient4 = new int[]{android.graphics.Color.rgb(90, 75, 65), android.graphics.Color.rgb(90, 75, 65), android.graphics.Color.rgb(75, 0, 0)};
     int[] gradient5 = new int[]{android.graphics.Color.rgb(55, 68, 82), android.graphics.Color.rgb(55, 68, 82), android.graphics.Color.rgb(75, 0, 71)};
     int[][] gradients = new int[][]{gradient1, gradient2, gradient3, gradient4, gradient5};
-    static String currentGradient;
+    static int[] currentGradient;
+    static String currentAccent;
     int num = 0;
     int previousNum = 0;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Logs 'install' and 'app activate' App Events.
+      //  AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+//        AppEventsLogger.deactivateApp(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -432,7 +450,9 @@ public class MainActivity extends Activity {
 
     // This method picks a new BG gradient and draws it
     public void updateBG() {
+        // SharedPreferences stores variables in memory
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
         num = prefs.getInt("num", 0);
         previousNum = prefs.getInt("previousNum", 0);
         // Pick a random background gradient
@@ -440,19 +460,23 @@ public class MainActivity extends Activity {
         num = random.nextInt(5);
         while (num == previousNum) {
             num = random.nextInt(5);
-            System.out.println("We accidentally chose the same bg twice in a row, switching it up right now");
+            System.out.println("We accidentally chose the same bg twice in a row, so I'm switching it up right now");
         }
-        currentGradient = String.valueOf(gradients[num][2]); // Send to BlurredActivity.java
+        currentAccent = String.valueOf(gradients[num][2]); // Send to BlurredActivity.java
+        currentGradient = gradients[num];
         // Draw gradient background
         View layout = findViewById(R.id.fullScreenLayout);
         GradientDrawable gd = new GradientDrawable(
                 GradientDrawable.Orientation.TOP_BOTTOM,
-                gradients[num]);
+                currentGradient);
         layout.setBackgroundDrawable(gd);
         previousNum = num;
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("num", num); // value to store
         editor.putInt("previousNum", previousNum); // value to store
+        editor.putInt("currentGradient1", currentGradient[0]); // value to store
+        editor.putInt("currentGradient2", currentGradient[1]); // value to store
+        editor.putInt("currentGradient3", currentGradient[2]); // value to store
         editor.commit(); // Store to android memory
     }
 

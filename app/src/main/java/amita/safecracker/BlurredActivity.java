@@ -144,7 +144,7 @@ public class BlurredActivity extends Activity {
         params.setMargins((int) (0.01 * getWidth()), 0, (int) (0.01 * getWidth()), 0);
         shareButton.setLayoutParams(params);
         final GradientDrawable gdDefault = new GradientDrawable();
-        gdDefault.setColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
+        gdDefault.setColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
         gdDefault.setCornerRadius(20);
         shareButton.setBackground(gdDefault);
         Typeface tf = Typeface.createFromAsset(getAssets(),
@@ -159,10 +159,11 @@ public class BlurredActivity extends Activity {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Bring up social media panel, where they can share stuff
+              /*  // Bring up social media panel, where they can share stuff
                 Intent i = new Intent(context, SocialActivity.class);
                 startActivity(i);
-                finish();//ends current activity
+                finish();//ends current activity*/
+                shareIt();
             }
         });
         shareButton.setOnTouchListener(new View.OnTouchListener() {
@@ -173,7 +174,7 @@ public class BlurredActivity extends Activity {
                     gdHover.setColor(Color.rgb(255, 255, 255));
                     gdHover.setCornerRadius(20);
                     shareButton.setBackground(gdHover);
-                    shareButton.setTextColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
+                    shareButton.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     shareButton.setBackground(gdDefault);
                     shareButton.setTextColor(Color.rgb(255, 255, 255));
@@ -211,7 +212,7 @@ public class BlurredActivity extends Activity {
                     gdHover.setColor(Color.rgb(255, 255, 255));
                     gdHover.setCornerRadius(20);
                     nextButton.setBackground(gdHover);
-                    nextButton.setTextColor(Integer.parseInt(MainActivity.currentGradient));  // Receive from MainActivity.java
+                    nextButton.setTextColor(Integer.parseInt(MainActivity.currentAccent));  // Receive from MainActivity.java
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     nextButton.setBackground(gdDefault);
                     nextButton.setTextColor(Color.rgb(255, 255, 255));
@@ -235,8 +236,6 @@ public class BlurredActivity extends Activity {
         c3 = (TextView) findViewById(R.id.c3);
         c4 = (TextView) findViewById(R.id.c4);
         c1.setMinimumHeight(140);
-        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(getHeight()) + " " + String.valueOf(getStatusBarHeight()) + " " + String.valueOf(getWidth()), Toast.LENGTH_LONG);
-        //toast.show();
         c1.setMinimumWidth((int) (0.133079847 * imageHeight));
         c1.setMinimumHeight((int) (0.133079847 * imageHeight));
         c1.setLayoutParams(params);
@@ -250,7 +249,7 @@ public class BlurredActivity extends Activity {
         c4.setMinimumHeight((int) (0.133079847 * imageHeight));
         c4.setLayoutParams(params);
         GradientDrawable numberCircle = new GradientDrawable();
-        numberCircle.setColor(Integer.parseInt(MainActivity.currentGradient));  // Receive from MainActivity.java
+        numberCircle.setColor(Integer.parseInt(MainActivity.currentAccent));  // Receive from MainActivity.java
         numberCircle.setCornerRadius(((int) (0.14 * getWidth()) / 2));
         c1.setBackground(numberCircle);
         c2.setBackground(numberCircle);
@@ -264,7 +263,7 @@ public class BlurredActivity extends Activity {
         result.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.05 * imageHeight));
         result.setTypeface(tf);
         result.setPadding(0, (int) (-0.189701897 * result.getTextSize()), 0, (int) (-0.135501355 * result.getTextSize()));
-        result.setTextColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
+        result.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
         result.forceLayout();
         score = (TextView) findViewById(R.id.score);
         score.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.28 * imageHeight));
@@ -274,12 +273,12 @@ public class BlurredActivity extends Activity {
         RelativeLayout.LayoutParams params8 = (RelativeLayout.LayoutParams) score.getLayoutParams();
         params8.setMargins(0, 0, 0, (int) (0.068441064 * imageHeight));
         score.setLayoutParams(params8);
-        score.setTextColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
+        score.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
         //the best score textView
         bestScore = (TextView) findViewById(R.id.bestScore);
         bestScore.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.04 * imageHeight));
         bestScore.setPadding(0, (int) (-0.13 * bestScore.getTextSize()), 0, (int) (-0.26 * bestScore.getTextSize()));
-        bestScore.setTypeface(tf_light);
+        bestScore.setTypeface(tf);
         bestScore.setText(String.valueOf(scoreData));
         RelativeLayout.LayoutParams params9 = (RelativeLayout.LayoutParams) bestScore.getLayoutParams();
         // params9.setMargins(0, (int)(1.150441064*imageHeight), 0, 0);//tablet
@@ -289,7 +288,7 @@ public class BlurredActivity extends Activity {
        // params9.setMargins(0, (int) (1.200441064 * imageHeight), 0, 0);
 
         bestScore.setLayoutParams(params9);
-        bestScore.setTextColor(Integer.parseInt(MainActivity.currentGradient)); // Receive from MainActivity.java
+        bestScore.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
 
 
 //This is for saving your highscore
@@ -401,4 +400,17 @@ public class BlurredActivity extends Activity {
         return result;
     }
 
+    private void shareIt() {
+        // This new saved score is retrived and used in the tweet
+        prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+        long score = prefs.getLong("key", 0); //0 is the default value
+
+// Share's user's score when they click "share"
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Just got a #highscore of " + String.valueOf(score) + " on @DigitsGame. Loving this app www.digitsgame.ml";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Check This Out");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
 }

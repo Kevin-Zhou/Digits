@@ -31,10 +31,11 @@
 
             android:name=".SocialActivity"
             android:screenOrientation="portrait"
-            android:label="@string/title_activity_social" >
+            android:label="@string/title_activity_social"
+            android:theme="@android:style/Theme.NoTitleBar">
         </activity>
         <activity
-            android:name=".StoreActivity"
+            android:name=".InstructionsActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_store" >
         </activity>
@@ -63,6 +64,19 @@
             android:screenOrientation="portrait"
             android:label="@string/title_activity_store" >
         </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb122839281394596"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider122839281394596"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d45b8be8039174a79e9c2704b8f1619d0729a0ed" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
