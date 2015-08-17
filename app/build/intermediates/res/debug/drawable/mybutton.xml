@@ -8,7 +8,7 @@
     <item android:state_focused="true">
         <shape android:shape="rectangle"  >
             <corners android:radius="10dip" />
-            <stroke android:width="100dip" android:color="#00FFFF" />
+            <stroke android:width="100dip" android:color="#ff00ff9b" />
             <solid android:color="#ff308530"/>
         </shape>
     </item>
@@ -18,4 +18,4 @@
             <solid android:color="#00FFFF"/>
         </shape>
     </item>
-</selector><!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/drawable/mybutton.xml -->
+</selector><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/drawable/mybutton.xml -->

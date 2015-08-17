@@ -14,7 +14,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.MediaPlayer;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -467,6 +466,7 @@ public class MainActivity extends Activity {
                                     try {
                                         // Play click sound effect
                                         click.start();
+                                        Log.i(":D","as");
                                     } catch (IllegalStateException e) {
 
                                     }
