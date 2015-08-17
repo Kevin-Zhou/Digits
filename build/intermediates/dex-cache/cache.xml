@@ -2,109 +2,109 @@
 <items version="2" >
 
     <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="bdefc4532d6d22bf3dc708165dae7476c722dcce">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-eba0b289278af8a9d976831b67d45dc490e249b6.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0ae9dbcba3586aba019068bd1d60d1fa806f3195">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-8348e0f12d569c6579d6ab1963396567ddcad4f0.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter/1.7.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9f57fd0a75653eb8c9470aa748da9e3ccc1b9b2f">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-61eb5f9511759159b944b7f7b800b5278769028b.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-72b8c7701b1ca1bc76ea4225ae24ba3492641184.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-f695d63da3b0ff0070c83801be60683e4c52710a.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="78ed5a2b549403898727cc986013e8ea607a8c2b">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-22d59064eab79245b503f02f514bc38aecb78730.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.5/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6e65060ef2ec6ec98365250d2119d7968626fd3f">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-abed18d30041e9de3b350125dc86bffe37e5c9eb.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c86c9068b1b7b6572d9b1df8bc1e57560164d3a6">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-000526b23fe15c18faf0f9e4e1bc82e343b5788c.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-a1a962e83149530e9fc93a3ad056071f84d16167.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-composer/0.8.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="157015930713d0411b69a76606f306c9a2c11af3">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-53368285989cd7742ce11b36fa7223baab68f031.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-dc094974ee2424fb083f4963b2a4a00807c39ac9.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/classes-c56df40c9015ee4606952afe6a90eea86a2d2559.jar" />
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-40891bf8bc5b12b883a38b0e1c01ffd43d141d48.jar" />
     </item>
     <item
-        jar="/Users/acme_zx/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.6.1/efb0a36546aa8857ab8df358b106c1817e03cbee/retrofit-1.6.1.jar"
+        jar="C:\Users\Twins\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="efb0a36546aa8857ab8df358b106c1817e03cbee">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/retrofit-1.6.1-530bd58b8dd0a0d25d316b76ad42d8eb299fa9b1.jar" />
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-364f2eeab3daf7dbad0c0bf43583eefd36cb6095.jar" />
     </item>
     <item
-        jar="/Users/acme_zx/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-62deaa750389e2bf8672982d909f76124f4d5c53.jar" />
-    </item>
-    <item
-        jar="/Users/acme_zx/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jar="C:\Users\Twins\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/pre-dexed/debug/gson-2.2.4-624b31be34eabfd472eca527f75310c1243a17d6.jar" />
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\gson-2.2.4-7301947298d1294cc69ce989bcff96ee0d018ac5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\0.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="157015930713d0411b69a76606f306c9a2c11af3">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-d7aa88e4776da3cf560bbb7936f5eac88fb591ab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.4.2\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c86c9068b1b7b6572d9b1df8bc1e57560164d3a6">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-e05f5b8356394ad6f4b625430ac5e4b8564e6c9b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.7.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9f57fd0a75653eb8c9470aa748da9e3ccc1b9b2f">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-6e423a2ca9486d75d72aeff5c27edd4524bc6553.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.6.1\efb0a36546aa8857ab8df358b106c1817e03cbee\retrofit-1.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="efb0a36546aa8857ab8df358b106c1817e03cbee">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\retrofit-1.6.1-e71f668591d2ccc9e1c9da564719afdd4c57401c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-83b032f8daa3800c9ca9dd3156017f2f905222cc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-6ddaabaf4ac92258f0065e3834b7f2bfa66f98b5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-021fc88a1e8c1dca22771b3e1bf2f860e55e4667.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.7.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bdefc4532d6d22bf3dc708165dae7476c722dcce">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-241e2114f3981d8f21943e9eb15e67763e4224d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.facebook.android\facebook\4.5.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f021773115c763d36e7155c22245438b55a0b891">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-37108cc054d916b6aeadd08a30170b8427781a01.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Android Studio Bundle\Contents\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-8998d1afeb81eed8950858293b111700042b3dac.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.5\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6e65060ef2ec6ec98365250d2119d7968626fd3f">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-46e0716b365d0e440f771316701d24efdc15c3b3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="78ed5a2b549403898727cc986013e8ea607a8c2b">
+        <dex dex="C:\Users\Twins\Downloads\Digits\Digits\app\build\intermediates\pre-dexed\debug\classes-e6f6a19f823aea4483e84d763ca510a7cf39d060.jar" />
     </item>
 
 </items>
