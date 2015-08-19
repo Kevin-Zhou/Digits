@@ -2318,8 +2318,9 @@ containing a value of this type.
         public static final int lose=0x7f060002;
         public static final int next_level=0x7f060003;
         public static final int submit=0x7f060004;
-        public static final int tw__cacerts=0x7f060005;
-        public static final int win=0x7f060006;
+        public static final int submit_notworking=0x7f060005;
+        public static final int tw__cacerts=0x7f060006;
+        public static final int win=0x7f060007;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f070001;
