@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_pressed="true" >
-        <shape android:shape="rectangle"
-            android:background="#16F9AE"
-            android:color="#2C4142">
+        <shape android:shape="rectangle">
             <corners android:radius="25dp" />
             <stroke android:width="1dip" android:color="#16F9AE" />
             <solid android:color="#16F9AE"/>
@@ -12,14 +10,15 @@
     <item android:state_focused="true">
         <shape android:shape="rectangle"  >
             <corners android:radius="25dp" />
-            <stroke android:width="100dip" android:color="#16F9AE" />
-            <solid android:color="#16F9AE"/>
+            <stroke android:width="100dip" android:color="#00ACFF" />
+            <solid android:color="#00ACFF"/>
         </shape>
     </item>
     <item >
-        <shape android:shape="rectangle"  >
+        <shape android:shape="rectangle"
+            android:color="#00ACFF">
             <corners android:radius="25dp" />
-            <stroke android:width="1dip" android:color="#16F9AE" />
+            <stroke android:width="1dip" android:color="#00ACFF" />
             <solid android:color="#00fff4f6"/>
         </shape>
     </item>

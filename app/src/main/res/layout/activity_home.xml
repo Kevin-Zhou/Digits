@@ -13,8 +13,6 @@
                         android:id="@+id/imageView3"
             android:src="@drawable/hero"
             android:layout_alignParentTop="false"
-            android:layout_marginLeft="200dp"
-            android:layout_marginRight="200dp"
             android:layout_centerInParent="true" />
 
     <LinearLayout
@@ -33,11 +31,12 @@
             android:background="@drawable/mybutton3"
                 android:layout_below="@+id/imageView3"
                 android:fontFamily="font"
-                android:textColor="#16F9AE"
-                android:layout_centerInParent="true"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"
+            android:textColor="#FF016CA2"
+            android:paddingTop="1dp" />
 
         <Button
                 android:layout_width="50dp"
@@ -45,12 +44,14 @@
                 android:text="Play"
             android:layout_below="@+id/Instructions"
                 android:layout_alignBaseline="@+id/imageView3"
-                android:textColor="#16F9AE"
-                android:id="@+id/startGame"
+            android:id="@+id/startGame"
                 android:background="@drawable/mybutton3"
                 android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:textAlignment="gravity" />
+            android:textAlignment="gravity"
+            android:textColor="#FF016CA2"
+            android:paddingLeft="2dp"
+            android:paddingTop="1dp" />
 
         <Button
             android:layout_width="50dp"
@@ -58,13 +59,13 @@
             android:text="Multi-Player"
             android:layout_below="@+id/startGame"
             android:layout_alignBaseline="@+id/imageView3"
-            android:textColor="#16F9AE"
             android:id="@+id/multiplayer"
             android:background="@drawable/mybutton3"
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:textColor="#FF016CA2" />
     </LinearLayout>
 
 

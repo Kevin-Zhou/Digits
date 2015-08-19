@@ -454,8 +454,8 @@ public class MainActivity extends Activity {
                 if (inViewInBounds(textviews[counter], x, y)) {
                     int num = Integer.parseInt(textviews[counter].getText().toString()); //take the number in the texview
                     if (num == 9) { //if the number of equal to 9 set it back to 0
-                        try {
                         textviews[counter].setText("0");
+                        try {
                             new Thread(new Runnable() {
                                 public void run() {
                                     try {
