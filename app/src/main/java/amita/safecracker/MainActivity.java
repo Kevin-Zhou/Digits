@@ -83,7 +83,6 @@ public class MainActivity extends Activity {
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
      MediaPlayer loop;
-    MediaPlayer click;
     MediaPlayer submit;
     Boolean playingLoop = false;
 
@@ -92,7 +91,9 @@ public class MainActivity extends Activity {
         super.onResume();
         try {
             if (playingLoop == false) {
-                loop = MediaPlayer.create(this, R.raw.loop);
+                // Play background music
+                loop = MediaPlayer.create(getApplicationContext(), R.raw.loop);
+                loop.setVolume(0.3f, 0.3f);
                 loop.setLooping(true);
                 loop.start();
                 playingLoop = true;
@@ -109,7 +110,10 @@ public class MainActivity extends Activity {
         super.onPause();
         try {
             if (playingLoop == true) {
+                // Stop playing background music
                 loop.stop();
+                loop.release();
+                loop = null;
                 playingLoop = false;
             }
         } catch (IllegalStateException e) {
@@ -126,10 +130,10 @@ public class MainActivity extends Activity {
 
         updateBG(); // Makes new BG gradient
 
-        // Loads sound effects
+        // Loads background music loops
         loop = MediaPlayer.create(getApplicationContext(), R.raw.loop);
-        submit = MediaPlayer.create(getApplicationContext(), R.raw.submit);
-        click = MediaPlayer.create(getApplicationContext(), R.raw.click);
+        loop.setVolume(0.3f, 0.3f);
+        loop.setLooping(true);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -250,9 +254,7 @@ public class MainActivity extends Activity {
         clickSubmit(); //when the submit button is clicked
 
         try {
-            loop.setVolume(0.3f, 0.3f);
             // Play background music
-            loop.setLooping(true);
             loop.start();
             playingLoop = true;
         } catch (IllegalStateException e) {
@@ -321,12 +323,15 @@ public class MainActivity extends Activity {
                     if (numExactlyCorrect == 4) //if they got 4 numbers exactly, right, that means they guessed the right number
                     {
                         won = true; //set the won variable to true
+                        // Sends blurredActivity info that player won, so play the won sound effect
+                        editor = prefs.edit();
+                        editor.putBoolean("won", true); // value to store
+                        editor.commit();
                         System.out.println("YOU WON!!! =D");
                         chronometer.stop();
                         final long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
                         System.out.print(elapsedMillis + " sa");
                         //Starts a new activity
-                        // https://github.com/500px/500px-android-blur
                         BlurBehind.getInstance().execute(MainActivity.this, new OnBlurCompleteListener() {
                             @Override
                             public void onBlurComplete() {
@@ -383,8 +388,9 @@ public class MainActivity extends Activity {
                     }
                     //if the current row is greater than 10 and they still haven't won yet, they've lost
                     if (won == false && currentRow > 10) {
+                        // Sends blurredActivity info that player lost, so play the lost sound effect
                         editor = prefs.edit();
-                        editor.putInt("lost", 1); // value to store
+                        editor.putBoolean("won", false); // value to store
                         editor.commit();
                         lost = true;
                         System.out.println("BOO YOU LOST");
@@ -392,13 +398,12 @@ public class MainActivity extends Activity {
                         final long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
                         System.out.print(elapsedMillis + " sa");
                         //this starts the new activity
-                        // https://github.com/500px/500px-android-blur
                         BlurBehind.getInstance().execute(MainActivity.this, new OnBlurCompleteListener() {
                             @Override
                             public void onBlurComplete() {
                                 Intent intent = new Intent(MainActivity.this, BlurredActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                                intent.putExtra("val", 1);//sends the class info that the user won
+                                intent.putExtra("val", 1);//sends the class info that the user lost
                                 intent.putExtra("time", elapsedMillis);
                                 String ans=String.valueOf(digits[0])+String.valueOf(digits[1])+String.valueOf(digits[2])+String.valueOf(digits[3]);
                                 intent.putExtra("answer", ans);
@@ -415,8 +420,14 @@ public class MainActivity extends Activity {
                     public void run() {
                         try {
                             // Play submit sound effect
+                            MediaPlayer submit = MediaPlayer.create(getApplicationContext(), R.raw.submit);
                             submit.start();
+                            Thread.sleep(1000);
+                            submit.release();
+                            submit = null;
                         } catch (IllegalStateException e) {
+
+                        } catch (InterruptedException e) {
 
                         }
                     }
@@ -449,8 +460,14 @@ public class MainActivity extends Activity {
                                 public void run() {
                                     try {
                                         // Play click sound effect
+                                        MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
                                         click.start();
+                                        Thread.sleep(1000);
+                                        click.release();
+                                        click = null;
                                     } catch (IllegalStateException e) {
+
+                                    } catch (InterruptedException e) {
 
                                     }
                                 }
@@ -465,9 +482,15 @@ public class MainActivity extends Activity {
                                 public void run() {
                                     try {
                                         // Play click sound effect
+                                        MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
                                         click.start();
+                                        Thread.sleep(1000);
+                                        click.release();
+                                        click = null;
                                         Log.i(":D","as");
                                     } catch (IllegalStateException e) {
+
+                                    } catch (InterruptedException e) {
 
                                     }
                                 }
@@ -515,7 +538,7 @@ public class MainActivity extends Activity {
     @Override //this method doesn't do anything
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
+        // automatically handle clicks on the HomeActivity/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 

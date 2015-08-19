@@ -16,6 +16,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Display;
@@ -23,16 +24,10 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import blurEffect.BlurBehind;
 
@@ -102,28 +97,34 @@ public class BlurredActivity extends Activity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     protected void onCreate(Bundle savedInstanceState) {
-        int lost;
+ super.onCreate(savedInstanceState);
+    }
+
+
+    @Override
+    protected void onResume() { // Redraws the Share and Next Level buttons due to stupid bug that cuts off the rounded rectangle shape
+        super.onResume();
+        boolean won;
         prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
-        lost = prefs.getInt("lost", 0);
-        if (lost == 1) {
+        won = prefs.getBoolean("won", false);
+        if (won == false) {
             try {
                 // Play lost sound effect
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.lose);
-                mp.start();
+                MediaPlayer lose = MediaPlayer.create(getApplicationContext(), R.raw.lose);
+                lose.start();
             } catch (IllegalStateException e) {
 
             }
         } else {
             try {
-                // Play lost sound effect
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.win);
-                mp.start();
+                // Play win sound effect
+                MediaPlayer win = MediaPlayer.create(getApplicationContext(), R.raw.win);
+                win.start();
             } catch (IllegalStateException e) {
 
             }
         }
 
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blurred);
         BlurBehind.getInstance()
                 .withAlpha(250)
@@ -144,11 +145,11 @@ public class BlurredActivity extends Activity {
         System.out.println(imageHeight / getHeight());
 
 
-// THE FOLLOWING CODE MAKES THE SHARE/SHOP/NEXT BUTTONS
+        // THE FOLLOWING CODE MAKES THE SHARE/SHOP/NEXT BUTTONS
         //the layout on which you are working
         LinearLayout layout = (LinearLayout) findViewById(R.id.buttons);
         RelativeLayout.LayoutParams params7 = (RelativeLayout.LayoutParams) layout.getLayoutParams();
-        params7.setMargins(0, 0, 0, (int) (0.184410646 * imageHeight));
+        params7.setMargins(0, 0, 0, (int) (0.15 * imageHeight));
         layout.setLayoutParams(params7);
         //set the properties for button
         final Button shareButton = new Button(this);
@@ -204,8 +205,46 @@ public class BlurredActivity extends Activity {
                 return false;
             }
         });
-
         layout.addView(shareButton);
+        final Button homeButton = new Button(this);
+        homeButton.setText(Html.fromHtml("&#8962;"));
+        homeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        homeButton.setId(R.id.loopGame);
+        homeButton.setGravity(Gravity.CENTER);
+        homeButton.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
+        homeButton.setTextColor(Color.rgb(255, 255, 255));
+        homeButton.setLayoutParams(params);
+        homeButton.setBackground(gdDefault);
+        homeButton.setTypeface(tf);
+        homeButton.setHeight((int) ((0.093155893) * imageHeight));
+        homeButton.setPadding((int) (0.035185185 * getWidth()), 0, (int) (0.035185185 * getWidth()), 0);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts a new activity
+                        Intent intent = new Intent(BlurredActivity.this, HomeActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+        homeButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    GradientDrawable gdHover = new GradientDrawable();
+                    gdHover.setColor(Color.rgb(255, 255, 255));
+                    gdHover.setCornerRadius(20);
+                    homeButton.setBackground(gdHover);
+                    homeButton.setTextColor(Integer.parseInt(MainActivity.currentAccent));  // Receive from MainActivity.java
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    homeButton.setBackground(gdDefault);
+                    homeButton.setTextColor(Color.rgb(255, 255, 255));
+                }
+                return false;
+            }
+        });
+        layout.addView(homeButton);
         final Button nextButton = new Button(this);
         nextButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         nextButton.setId(R.id.loopGame);
@@ -287,7 +326,7 @@ public class BlurredActivity extends Activity {
 //why
         result = (TextView) findViewById(R.id.result);
         RelativeLayout.LayoutParams params6 = (RelativeLayout.LayoutParams) result.getLayoutParams();
-        params6.setMargins(0, (int) (0.047528517 * imageHeight), 0, 0);
+        params6.setMargins(0, (int) (0.04 * imageHeight), 0, 0);
         result.setLayoutParams(params6);
         result.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.05 * imageHeight));
         result.setTypeface(tf);
@@ -300,12 +339,12 @@ public class BlurredActivity extends Activity {
         score.setPadding(0, (int) (-0.23 * score.getTextSize()), 0, (int) (-0.26 * score.getTextSize()));
         score.setTypeface(tf_light);
         RelativeLayout.LayoutParams params8 = (RelativeLayout.LayoutParams) score.getLayoutParams();
-        params8.setMargins(0, 0, 0, (int) (0.068441064 * imageHeight));
+        params8.setMargins(0, 0, 0, (int) (0.12 * imageHeight));
         score.setLayoutParams(params8);
         score.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
         //the best score textView
         bestScore = (TextView) findViewById(R.id.bestScore);
-        bestScore.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.04 * imageHeight));
+        bestScore.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.05 * imageHeight));
         bestScore.setPadding(0, (int) (-0.13 * bestScore.getTextSize()), 0, (int) (-0.26 * bestScore.getTextSize()));
         bestScore.setTypeface(tf);
         bestScore.setText(String.valueOf(scoreData));
@@ -313,8 +352,8 @@ public class BlurredActivity extends Activity {
         // params9.setMargins(0, (int)(1.150441064*imageHeight), 0, 0);//tablet
         //  params9.setMargins(0, (int)(1.250441064*imageHeight), 0, 0); //phone
         //params9.addRule(Layout.BELOW,nextBUTTON.getID());
-       params9.setMargins(0, (int) (0.713 * getHeight()), 0, 0);
-       // params9.setMargins(0, (int) (1.200441064 * imageHeight), 0, 0);
+        params9.setMargins(0, (int) (0.595 * getHeight()), 0, 0);
+        // params9.setMargins(0, (int) (1.200441064 * imageHeight), 0, 0);
 
         bestScore.setLayoutParams(params9);
         bestScore.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
@@ -332,7 +371,7 @@ public class BlurredActivity extends Activity {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putLong("key", scoreData);
             editor.commit();
-            //This new saved score is retrived and is shown to the user.
+            //This new saved score is retrieved and is shown to the user.
             prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
             score = prefs.getLong("key", 0); //0 is the default value
         }
@@ -388,7 +427,6 @@ public class BlurredActivity extends Activity {
             result.setText("Got It!" + " | " + timeString);
             nextButton.setText("Next Level");
         }
-
     }
 
     // This method separates the individual characters of a String with many spaces

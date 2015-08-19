@@ -12,54 +12,65 @@
             android:layout_height="wrap_content"
                         android:id="@+id/imageView3"
             android:src="@drawable/hero"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-       />
-
-        <Button
-            android:id="@+id/Instructions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Instructions"
-            android:padding="10dp"
-            android:background="@drawable/mybutton3"
-            android:layout_below="@+id/imageView3"
-            android:fontFamily="font"
-            android:textColor="#16F9AE"
+            android:layout_alignParentTop="false"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
             android:layout_centerInParent="true" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Play"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
+                android:id="@+id/Instructions"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="Instructions"
+            android:background="@drawable/mybutton3"
+                android:layout_below="@+id/imageView3"
+                android:fontFamily="font"
+                android:textColor="#16F9AE"
+                android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:layout_marginRight="20dp" />
+
+        <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="Play"
             android:layout_below="@+id/Instructions"
+                android:layout_alignBaseline="@+id/imageView3"
+                android:textColor="#16F9AE"
+                android:id="@+id/startGame"
+                android:background="@drawable/mybutton3"
+                android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textAlignment="gravity" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Multi-Player"
+            android:layout_below="@+id/startGame"
             android:layout_alignBaseline="@+id/imageView3"
             android:textColor="#16F9AE"
-            android:id="@+id/startGame"
+            android:id="@+id/multiplayer"
             android:background="@drawable/mybutton3"
             android:layout_centerHorizontal="true"
-            />
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Multi-Player"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/startGame"
-        android:layout_alignBaseline="@+id/imageView3"
-        android:textColor="#16F9AE"
-        android:id="@+id/multiplayer"
-        android:background="@drawable/mybutton3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp" />
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentTop="true"
     android:src="@drawable/settings"
         android:layout_alignParentLeft="true"
@@ -67,12 +78,14 @@
         android:scaleType="fitCenter"
         android:background="@drawable/mybutton4"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginBottom="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp" />
 
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/share"
         android:scaleType="fitCenter"
         android:background="@drawable/mybutton4"
@@ -80,7 +93,9 @@
         android:layout_alignParentRight="true"
         android:id="@+id/share"
                 android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp" />
 
 
     </RelativeLayout>

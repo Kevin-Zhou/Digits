@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference|color" name="dgts__accentColor"/>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -34,7 +34,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_button_background_color">#415dae</color>
@@ -49,10 +49,10 @@
     <color name="com_facebook_likeboxcountview_text_color">#6a7180</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
     <color name="com_facebook_share_button_text_color">#FFFFFF</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/defaults.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/defaults.xml -->
     <eat-comment/>
     <color name="default_overlay_color">#00FFFFFF</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dgts__default_accent">#5baaf4</color>
     <color name="dgts__default_logo_name">#56626d</color>
@@ -60,7 +60,7 @@
     <color name="dgts__purple_pressed">#553788</color>
     <color name="dgts__text_dark">#ff030303</color>
     <color name="dgts__text_light">#ffffff</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -95,7 +95,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <color name="tw__blue_default">#FF5BAAF4</color>
     <color name="tw__blue_pressed">#FF4186C8</color>
@@ -104,7 +104,7 @@
     <color name="tw__medium_gray">#8899a6</color>
     <color name="tw__solid_white">#FFFFFFFF</color>
     <color name="tw__transparent">#00000000</color>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <color name="tw__tweet_action_color">#55acee</color>
     <color name="tw__tweet_container_border">#1a000000</color>
@@ -146,7 +146,7 @@
     <declare-styleable name="com_facebook_profile_picture_view"><attr name="com_facebook_preset_size"><enum name="small" value="-2"/><enum name="normal" value="-3"/><enum name="large" value="-4"/></attr><attr format="boolean" name="com_facebook_is_cropped"/></declare-styleable>
     <declare-styleable name="tw__AspectRatioImageView"><attr format="float" name="tw__image_aspect_ratio"/><attr format="enum" name="tw__image_dimension_to_adjust"><enum name="height" value="0"/><enum name="width" value="1"/></attr></declare-styleable>
     <declare-styleable name="tw__TweetView"><attr format="string" name="tw__tweet_id"/><attr format="color" name="tw__container_bg_color"/><attr format="color" name="tw__primary_text_color"/><attr format="color" name="tw__action_color"/><attr format="boolean" name="tw__tweet_actions_enabled"/></declare-styleable>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -208,11 +208,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="com_facebook_likeboxcountview_border_radius">3dp</dimen>
     <dimen name="com_facebook_likeboxcountview_border_width">1dp</dimen>
@@ -233,7 +233,7 @@
     <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="dgts__country_code_margin_bottom">1dp</dimen>
     <dimen name="dgts__margin_bottom">16dp</dimen>
@@ -243,7 +243,7 @@
     <dimen name="dgts__progress_bar_side_length">28dp</dimen>
     <dimen name="dgts__terms_text_size">12sp</dimen>
     <dimen name="dgts__title_text_size">22sp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -254,11 +254,11 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tw__btn_bar_margin_left">8dp</dimen>
     <dimen name="tw__btn_bar_margin_right">8dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tw__compact_tweet_action_bar_offset_left">-12dp</dimen>
     <dimen name="tw__compact_tweet_attribution_line_margin_right">36dp</dimen>
@@ -292,13 +292,13 @@
     <dimen name="tw__login_btn_radius">5dp</dimen>
     <dimen name="tw__login_btn_right_padding">12dp</dimen>
     <dimen name="tw__login_btn_text_size">14sp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tw__padding_permission_horizontal_container">24dp</dimen>
     <dimen name="tw__padding_permission_vertical_container">24dp</dimen>
     <dimen name="tw__permission_description_text_size">16sp</dimen>
     <dimen name="tw__permission_title_text_size">24sp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tw__text_size_large">16dp</dimen>
     <dimen name="tw__text_size_medium">14dp</dimen>
@@ -330,7 +330,7 @@
     <dimen name="tw__tweet_timestamp_padding_left">4dp</dimen>
     <dimen name="tw__tweet_verified_check_padding_left">3dp</dimen>
     <dimen name="tw__tweet_verified_margin_bottom">3dp</dimen>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -340,30 +340,30 @@
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/ids.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/ids.xml -->
     <eat-comment/>
     <item name="share" type="id">share</item>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="split_action_bar" type="id"/>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/ids.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/ids.xml -->
     <eat-comment/>
     <item name="store" type="id">store</item>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="up" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/defaults.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/defaults.xml -->
     <eat-comment/>
     <integer name="default_blur_radius">1</integer>
     <integer name="default_downsample_factor">8</integer>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1h</item>
@@ -377,7 +377,7 @@
         <item quantity="one">1s</item>
         <item quantity="other">%ds</item>
     </plurals>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -396,11 +396,11 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Digits</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -418,7 +418,7 @@
     <string name="com_facebook_send_button_text">Send</string>
     <string name="com_facebook_share_button_text">Share</string>
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Cancel</string>
     <string name="dgts__communication_error">Communication Error</string>
@@ -467,62 +467,62 @@
     <string name="dgts_pin_code_terms">You have previously set a 2-step verification code on digits.com</string>
     <string name="dgts_verify">Verify</string>
     <string name="dgts_verifying">Verifying</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <string name="kit_name">Twitter</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Send</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_social">Social</string>
     <string name="title_activity_store">StoreActivity</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Allow</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__favorite_tweet">Favorite Tweet</string>
     <string name="tw__favorited_tweet">Favorited Tweet</string>
     <string name="tw__loading_tweet">Loading Tweet</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Log in with Twitter</string>
     <string name="tw__not_now_btn_txt">Not now</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">MM/dd/yy</string>
     <string name="tw__relative_date_format_short">MMM dd</string>
     <string name="tw__retweeted_by_format">Retweeted by %1$s</string>
     <string name="tw__share_content_format">Check out @%1$s\'s Tweet: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Get updates and other information from %1$s when you allow
         them access to your email on your Twitter account \@%2$s</string>
     <string name="tw__share_email_title">Share your email address</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet from %1$s (@%2$s)</string>
     <string name="tw__share_tweet">Share Tweet</string>
     <string name="tw__tweet_content_description">%1$s. %2$s. %3$s.</string>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1438,12 +1438,12 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Digits_default" parent="@android:style/Theme.Light">
         <item name="dgts__accentColor">@color/dgts__default_accent</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <style name="MessengerButton">
     <item name="android:clickable">true</item>
@@ -1503,7 +1503,7 @@
     <style name="MessengerButtonText.White.Small">
     <item name="android:drawableLeft">@drawable/messenger_bubble_small_blue</item>
   </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1831,7 +1831,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/com_facebook_button_background</item>
@@ -1864,7 +1864,7 @@
         <item name="android:drawableLeft">@null</item>
         <item name="android:textColor">#4b5164</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values/values.xml -->
     <eat-comment/>
     <style name="dgts__ButtonText">
         <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
@@ -1885,7 +1885,7 @@
         <item name="android:textSize">@dimen/dgts__title_text_size</item>
         <item name="android:layout_marginBottom">24dp</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values/values.xml -->
     <eat-comment/>
     <style name="tooltip_bubble_text">
 	    <item name="android:textColor">@android:color/white</item>
@@ -1895,7 +1895,7 @@
 	    <item name="android:shadowRadius">0.25</item>
 	    <item name="android:shadowColor">#40000000</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <style name="tw__AttributionText" ns1:ignore="NewApi">
         <item name="android:layout_width">wrap_content</item>
@@ -1904,7 +1904,7 @@
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:singleLine">true</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <style name="tw__Button">
         <item name="android:background">@drawable/tw__login_btn</item>
@@ -1924,7 +1924,7 @@
         <item name="android:paddingRight">0dp</item>
         <item name="android:paddingBottom">0dp</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <style name="tw__CompactAttributionLine" ns1:ignore="NewApi">
         <item name="android:layout_width">wrap_content</item>
@@ -1937,7 +1937,7 @@
         <item name="android:paddingTop">@dimen/tw__compact_tweet_container_padding_top</item>
         <item name="android:paddingBottom">@dimen/tw__compact_tweet_container_padding_bottom</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values/values.xml -->
     <eat-comment/>
     <style name="tw__Permission_Container">
         <item name="android:paddingLeft">@dimen/tw__padding_permission_horizontal_container</item>
@@ -1955,7 +1955,7 @@
         <item name="android:layout_marginBottom">5dp</item>
         <item name="android:layout_marginTop">30dp</item>
     </style>
-    <!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
+    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values/values.xml -->
     <eat-comment/>
     <style name="tw__TweetActionButton">
         <item name="android:layout_width">wrap_content</item>
