@@ -122,7 +122,7 @@ public class Instructions4 extends Activity {
         if (event.getAction() == MotionEvent.ACTION_UP ) {
 
                          System.out.println("HEYYYYYY");
-            Intent i= new Intent(context,Instructions.class);
+            Intent i= new Intent(context,Home.class);
             startActivity(i);
             finish();
         }

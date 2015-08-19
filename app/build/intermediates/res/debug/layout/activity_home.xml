@@ -1,47 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
     android:background="@drawable/home_gradient"
-    android:nestedScrollingEnabled="true"
-    android:id="@+id/fullScreenLayout">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView3"
+            android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
             android:src="@drawable/hero"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
        />
 
-        <TextView
+        <Button
+            android:id="@+id/Instructions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text=""
-            android:layout_weight="@integer/status_bar_notification_info_maxnum"
-            android:id="@+id/startGame"
-            android:textColor="#fa08f0c8"
-            android:gravity="center"
+            android:text="Instructions"
+            android:padding="10dp"
+            android:background="@drawable/mybutton3"
             android:layout_below="@+id/imageView3"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentRight="false"
-            android:layout_alignParentStart="false"
-            android:layout_marginBottom="40dp"
-            android:padding="10dp" />
+            android:fontFamily="font"
+            android:textColor="#16F9AE"
+            android:layout_centerInParent="true" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Instructions"
+            android:layout_alignBaseline="@+id/imageView3"
+            android:textColor="#16F9AE"
+            android:id="@+id/startGame"
+            android:background="@drawable/mybutton3"
+            android:layout_centerHorizontal="true"
+            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multi-Player"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/startGame"
+        android:layout_alignBaseline="@+id/imageView3"
+        android:textColor="#16F9AE"
+        android:id="@+id/multiplayer"
+        android:background="@drawable/mybutton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+    android:src="@drawable/settings"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/setting"
+        android:scaleType="fitCenter"
+        android:background="@drawable/mybutton4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp" />
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/share"
+        android:scaleType="fitCenter"
+        android:background="@drawable/mybutton4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/share"
+                android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp" />
+
+
     </RelativeLayout>
 
 
-</LinearLayout><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/activity_home.xml -->
+
+
+<!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/activity_home.xml -->

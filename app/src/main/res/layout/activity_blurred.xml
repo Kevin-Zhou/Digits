@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/number_screen"
+        android:src="@drawable/clouds_on_top"
         android:clickable="false"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"

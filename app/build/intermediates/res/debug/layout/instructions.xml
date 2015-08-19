@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/number_screen"
+        android:src="@drawable/clouds_on_top"
         android:clickable="false"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
@@ -32,27 +32,6 @@
         android:layout_alignBaseline="@+id/imageView"
         android:layout_centerInParent="true" />
 
-    <Button
-        android:id="@+id/Instructions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Instructions"
-        android:padding="10dp"
-        android:layout_below="@+id/welcome"
-        android:fontFamily="font"
-        android:textColor="#ff00ff9b"
-        android:layout_centerInParent="true" />
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
-        android:id="@+id/startGame"
-        android:layout_below="@+id/Instructions"
-        android:layout_alignBaseline="@+id/imageView"
-        android:textColor="#ff00ff9b"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
 
 </RelativeLayout><!-- From: file:/C:/Users/Twins/Downloads/Digits/Digits/app/src/main/res/layout/instructions.xml -->

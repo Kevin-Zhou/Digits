@@ -9,14 +9,17 @@ import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Display;
-import android.view.MotionEvent;
+import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
@@ -31,16 +34,22 @@ public class Home extends Activity {
     private static final String TWITTER_KEY = "yBo3DqaGXDbcE3cGugMDRQwKK";
     private static final String TWITTER_SECRET = "LQWF2vrV1e0bPzEfPVF8bLhBj6fstEQraSwGs8RrrjrkGcdZJz";
 
-    TextView playAgain;//lets the user play again
     Context context;//needed to start a new intent;
+    Button start;
+    Button multiplayer;
+   Button instructions;
     ImageView pic;
+
+int imageHeight;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_home);
-        playAgain = (TextView) findViewById(R.id.startGame);
+        start = (Button) findViewById(R.id.startGame);
+        multiplayer = (Button) findViewById(R.id.multiplayer);
+        instructions =(Button) findViewById(R.id.Instructions);
         context=this;//activity is a subclass of context
         Intent i = getIntent();
 
@@ -53,27 +62,37 @@ public class Home extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         //scale picture and text
         pic = (ImageView) findViewById(R.id.imageView3);
-        //scaleImage(pic,metrics.widthPixels);
+        scaleImage(pic,metrics.widthPixels);
 
         //to center the pic in code
         ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(pic.getLayoutParams());
+
         marginParams.setMargins((int)(0.05*getWidth()), (int)(0.05*getHeight()), (int)(0.05*getWidth()), (int)(0.05*getHeight()));
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(marginParams);
+        //layoutParams.setMargins(0, (int)(0.08*getHeight()), 0, (int)(0.05*getHeight()));
+        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        //pic.setLayoutParams(marginParams);
         pic.setLayoutParams(layoutParams);
-        playAgain.setTextSize((int) (0.05 * getWidth()));
-        playAgain.setTypeface(tf_light);
-    }
 
-    //enables clicing
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_UP ) {
 
-            System.out.println("HEYYYYYY");
-            Intent i= new Intent(context,Instructions.class);
-            startActivity(i);
-        }
-        return true;
+
+        //creating the new buttons
+        start.setTextSize((int) (0.025 * getWidth()));
+        start.setTypeface(tf_light);
+        multiplayer.setTextSize((int) (0.025 * getWidth()));
+        multiplayer.setTypeface(tf_light);
+        instructions.setTextSize((int) (0.025 * getWidth()));
+        instructions.setTypeface(tf_light);
+        click1();
+        click2();
+        click3();
+        //added code
+        start.setGravity(Gravity.CENTER);
+        start.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
+        instructions.setGravity(Gravity.CENTER);
+        instructions.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
+       multiplayer.setGravity(Gravity.CENTER);
+       multiplayer.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
     }
 
     private void scaleImage(ImageView view, int boundBoxInDp)
@@ -111,6 +130,8 @@ public class Home extends Activity {
         params.width = width;
         params.height = height;
         view.setLayoutParams(params);
+        imageHeight=params.height;
+
     }
     private int dpToPx(int dp)
     {
@@ -137,8 +158,44 @@ public class Home extends Activity {
         return height;
     }
 
+    public void click1() {
+        //Select a specific button to bundle it with the action you want
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cal = new Intent(getApplicationContext(), Instructions5.class);
+                // passing array index
+                startActivity(cal);
+                //finish();
+            }
+        });
+    }
 
 
+    public void click2() {
+        //Select a specific button to bundle it with the action you want
+        instructions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cal = new Intent(getApplicationContext(), Instructions2.class);
+                // passing array index
+                startActivity(cal);
+               // finish();
+            }
+        });
+    }
 
+    public void click3() {
+        //Select a specific button to bundle it with the action you want
+        multiplayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cal = new Intent(getApplicationContext(), Instructions5.class);
+                // passing array index
+                startActivity(cal);
+                // finish();
+            }
+        });
+    }
 
 }
