@@ -45,11 +45,11 @@ public final class R {
 	}
 	public static final class id {
 		public static final int imageView = 0x7f0e0064;
-		public static final int tw__allow_btn = 0x7f0e00b9;
-		public static final int tw__not_now_btn = 0x7f0e00b8;
-		public static final int tw__share_email_desc = 0x7f0e00b7;
-		public static final int tw__spinner = 0x7f0e00b6;
-		public static final int tw__web_view = 0x7f0e00b5;
+		public static final int tw__allow_btn = 0x7f0e00bc;
+		public static final int tw__not_now_btn = 0x7f0e00bb;
+		public static final int tw__share_email_desc = 0x7f0e00ba;
+		public static final int tw__spinner = 0x7f0e00b9;
+		public static final int tw__web_view = 0x7f0e00b8;
 	}
 	public static final class layout {
 		public static final int tw__activity_oauth = 0x7f040041;

@@ -90,7 +90,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/bestScore"
 
-        android:paddingBottom="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elegantTextHeight="false"
+        android:layout_alignBottom="@+id/imageView" />
 
 </RelativeLayout>

@@ -79,6 +79,8 @@ public class HomeActivity extends Activity {
         LinearLayout.LayoutParams params3 = (LinearLayout.LayoutParams) space2.getLayoutParams();
         params3.width=(int) (0.0416666667 * getWidth());
         System.out.println(getWidth());
+        instructions.setPadding((int) (0.00078125 * getHeight()), (int)(0.00078125*getHeight()),0, 0);
+        start.setPadding((int) (0.003125 * getHeight()), (int)(0.0015625*getHeight()),0,0);
 
         context=this;//activity is a subclass of context
         Intent i = getIntent();

@@ -97,7 +97,7 @@ public class BlurredActivity extends Activity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     protected void onCreate(Bundle savedInstanceState) {
- super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
     }
 
 
@@ -222,12 +222,12 @@ public class BlurredActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //Starts a new activity
-                        Intent intent = new Intent(BlurredActivity.this, HomeActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
+                Intent intent = new Intent(BlurredActivity.this, HomeActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                finish();
+            }
+        });
         homeButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -345,16 +345,16 @@ public class BlurredActivity extends Activity {
         //the best score textView
         bestScore = (TextView) findViewById(R.id.bestScore);
         bestScore.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.05 * imageHeight));
-        bestScore.setPadding(0, (int) (-0.13 * bestScore.getTextSize()), 0, (int) (-0.26 * bestScore.getTextSize()));
+        bestScore.setPadding(0, (int) (-0.23 * bestScore.getTextSize()), 0, (int) (-0.26 * bestScore.getTextSize()));
         bestScore.setTypeface(tf);
         bestScore.setText(String.valueOf(scoreData));
         RelativeLayout.LayoutParams params9 = (RelativeLayout.LayoutParams) bestScore.getLayoutParams();
         // params9.setMargins(0, (int)(1.150441064*imageHeight), 0, 0);//tablet
         //  params9.setMargins(0, (int)(1.250441064*imageHeight), 0, 0); //phone
         //params9.addRule(Layout.BELOW,nextBUTTON.getID());
-        params9.setMargins(0, (int) (0.595 * getHeight()), 0, 0);
+        params9.setMargins(0, 0, 0, (int)(0.2971428571*imageHeight));
         // params9.setMargins(0, (int) (1.200441064 * imageHeight), 0, 0);
-
+        System.out.println("Imageheight: " + imageHeight);
         bestScore.setLayoutParams(params9);
         bestScore.setTextColor(Integer.parseInt(MainActivity.currentAccent)); // Receive from MainActivity.java
 

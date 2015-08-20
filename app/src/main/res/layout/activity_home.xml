@@ -37,7 +37,9 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:textColor="#FF016CA2" />
+            android:textColor="#FF016CA2"
+            android:paddingTop="1px"
+            android:paddingLeft="1px" />
 
         <Space
             android:layout_width="20px"
@@ -55,7 +57,9 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:textColor="#FF016CA2" />
+            android:textColor="#FF016CA2"
+            android:paddingTop="2px"
+            android:paddingLeft="4px" />
 
         <Space
             android:layout_width="20px"

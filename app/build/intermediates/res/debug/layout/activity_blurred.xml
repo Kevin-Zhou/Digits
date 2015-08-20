@@ -90,7 +90,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/bestScore"
 
-        android:paddingBottom="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elegantTextHeight="false"
+        android:layout_alignBottom="@+id/imageView" />
 
-</RelativeLayout><!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/layout/activity_blurred.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/src/main/res/layout/activity_blurred.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1 h</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1 s</item>
         <item quantity="other">%ds</item>
     </plurals>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-es/values-es.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ir a la pantalla de inicio"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Desplazarse hacia arriba"</string>
@@ -29,7 +29,7 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Búsqueda por voz"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartir con"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Se produjo un error inesperado al descargar una imagen.</string>
     <string name="com_facebook_internet_permission_error_message">El inicio de sesión a la web requiere permiso de conexión a internet</string>
@@ -47,7 +47,7 @@
     <string name="com_facebook_send_button_text">Enviar</string>
     <string name="com_facebook_share_button_text">Compartir</string>
     <string name="com_facebook_tooltip_default">¡Nuevo! Tú tienes el control: elige qué información quieres compartir con las aplicaciones.</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.7.1/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Cancelar</string>
     <string name="dgts__communication_error">Error de comunicación</string>
@@ -93,30 +93,30 @@
     <string name="dgts_pin_code_terms">Ya has establecido un código de doble verificación en digits.com</string>
     <string name="dgts_verify">Verificar</string>
     <string name="dgts_verifying">Verificando</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.facebook.android/facebook/4.5.1/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Enviar</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Permitir</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Cargando Tweet</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Inicia sesión con Twitter</string>
     <string name="tw__not_now_btn_txt">Ahora no</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">d/M/y</string>
     <string name="tw__relative_date_format_short">d \'de\' MMM</string>
     <string name="tw__retweeted_by_format">Retwitteado por %1$s</string>
     <string name="tw__share_content_format">Échale un vistazo al Tweet de \@%1$s\: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.2/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Consigue actualizaciones e información de %1$s permitiéndole el acceso a tu correo electrónico en tu cuenta de Twitter \@%2$s</string>
     <string name="tw__share_email_title">Comparte tu dirección de correo electrónico</string>
-    <!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
+    <!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.4.0/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet de %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Compartir Tweet</string>
