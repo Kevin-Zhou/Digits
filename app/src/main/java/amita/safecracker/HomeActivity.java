@@ -26,7 +26,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Space;
+
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
@@ -44,10 +47,12 @@ public class HomeActivity extends Activity {
     Context context;//needed to start a new intent;
     Button start;
     Button multiplayer;
-   Button instructions;
+    Button instructions;
     ImageView pic;
-
-int imageHeight;
+    Space space1;
+    Space space2;
+    LinearLayout buttonsLayout;
+    int imageHeight;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +62,24 @@ int imageHeight;
         start = (Button) findViewById(R.id.startGame);
         multiplayer = (Button) findViewById(R.id.multiplayer);
         instructions =(Button) findViewById(R.id.Instructions);
+        buttonsLayout=(LinearLayout) findViewById(R.id.buttonsLinearLayout);
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) buttonsLayout.getLayoutParams();
+        params.setMargins(0, 0, 0, (int) (getHeight() / 7));
+        buttonsLayout.setLayoutParams(params);
+        instructions.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
+        instructions.setHeight((int) ((100 / 720) * getHeight() * 0.5965202983));
+        multiplayer.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
+        multiplayer.setHeight((int) ((100 / 720) * getHeight() * 0.5965202983));
+        start.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
+        start.setHeight((int) (( 100/ 720) * getHeight()*0.5965202983));
+        space1=(Space)(findViewById(R.id.space1));
+        space2=(Space)(findViewById(R.id.space2));
+        LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) space1.getLayoutParams();
+        params2.width=(int) (0.0416666667 * getWidth());
+        LinearLayout.LayoutParams params3 = (LinearLayout.LayoutParams) space2.getLayoutParams();
+        params3.width=(int) (0.0416666667 * getWidth());
+        System.out.println(getWidth());
+
         context=this;//activity is a subclass of context
         Intent i = getIntent();
 
@@ -69,15 +92,16 @@ int imageHeight;
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         //scale picture and text
         pic = (ImageView) findViewById(R.id.imageView3);
-        scaleImage(pic,metrics.widthPixels);
 
+        scaleImage(pic,(int)(getHeight()/(2)));
         //to center the pic in code
         ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(pic.getLayoutParams());
 
-        marginParams.setMargins((int)(0.05*getWidth()), (int)(0.05*getHeight()), (int)(0.05*getWidth()), (int)(0.05*getHeight()));
+        marginParams.setMargins((int)(0.05*getWidth()), (int)(0.15*getHeight()), (int)(0.05*getWidth()), (int)(0.05*getHeight()));
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(marginParams);
         //layoutParams.setMargins(0, (int)(0.08*getHeight()), 0, (int)(0.05*getHeight()));
         layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
         //pic.setLayoutParams(marginParams);
         pic.setLayoutParams(layoutParams);
 
@@ -85,6 +109,10 @@ int imageHeight;
 
         // Creating SETTINGS/SHARE buttons
         final ImageButton shareButton = (ImageButton)  findViewById(R.id.share);
+        RelativeLayout.LayoutParams params4 = (RelativeLayout.LayoutParams) shareButton.getLayoutParams();
+        params4.width=(int)(0.046875*getHeight());
+        params4.height=(int)(0.046875*getHeight());
+        params4.setMargins(0,(int)(0.046875*getHeight()),(int)(0.08333333*getWidth()),0);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,6 +150,10 @@ int imageHeight;
             }
         });
         final ImageButton settingsButton = (ImageButton)  findViewById(R.id.setting);
+        RelativeLayout.LayoutParams params5 = (RelativeLayout.LayoutParams) settingsButton.getLayoutParams();
+        params5.width=(int)(0.046875*getHeight());
+        params5.height=(int)(0.046875*getHeight());
+        params5.setMargins((int) (0.08333333 * getWidth()), (int) (0.046875 * getHeight()), 0, 0);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -259,8 +291,8 @@ int imageHeight;
         start.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
         instructions.setGravity(Gravity.CENTER);
         instructions.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
-       multiplayer.setGravity(Gravity.CENTER);
-       multiplayer.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
+        multiplayer.setGravity(Gravity.CENTER);
+        multiplayer.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
     }
 
     private void scaleImage(ImageView view, int boundBoxInDp)
@@ -348,7 +380,7 @@ int imageHeight;
                 Intent cal = new Intent(getApplicationContext(), Instructions2.class);
                 // passing array index
                 startActivity(cal);
-               // finish();
+                // finish();
             }
         });
     }

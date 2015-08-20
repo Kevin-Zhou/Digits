@@ -7,55 +7,64 @@
     android:background="@drawable/home_gradient"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-                        android:id="@+id/imageView3"
-            android:src="@drawable/hero"
-            android:layout_alignParentTop="false"
-            android:layout_centerInParent="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/hero"
+        android:layout_alignParentTop="false"
+        android:focusableInTouchMode="false"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true" />
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonsLinearLayout">
 
         <Button
-                android:id="@+id/Instructions"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="Instructions"
+            android:id="@+id/Instructions"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="Instructions"
             android:background="@drawable/mybutton3"
-                android:layout_below="@+id/imageView3"
-                android:fontFamily="font"
+            android:layout_below="@+id/imageView3"
+            android:fontFamily="font"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:layout_marginRight="20dp"
-            android:textColor="#FF016CA2"
-            android:paddingTop="1dp" />
+            android:textColor="#FF016CA2" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:id="@+id/space1" />
 
         <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="Play"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="Play"
             android:layout_below="@+id/Instructions"
-                android:layout_alignBaseline="@+id/imageView3"
+            android:layout_alignBaseline="@+id/imageView3"
             android:id="@+id/startGame"
-                android:background="@drawable/mybutton3"
-                android:layout_centerHorizontal="true"
+            android:background="@drawable/mybutton3"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:textColor="#FF016CA2"
-            android:paddingLeft="2dp"
-            android:paddingTop="1dp" />
+            android:textColor="#FF016CA2" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:id="@+id/space2" />
 
         <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100px"
+            android:layout_height="100px"
             android:text="Multi-Player"
             android:layout_below="@+id/startGame"
             android:layout_alignBaseline="@+id/imageView3"
@@ -64,8 +73,8 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:textAlignment="gravity"
-            android:layout_marginLeft="20dp"
-            android:textColor="#FF016CA2" />
+            android:textColor="#FF016CA2"
+            android:elegantTextHeight="false" />
     </LinearLayout>
 
 
@@ -73,7 +82,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
-    android:src="@drawable/settings"
+        android:src="@drawable/settings"
         android:layout_alignParentLeft="true"
         android:id="@+id/setting"
         android:scaleType="fitCenter"
@@ -93,13 +102,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:id="@+id/share"
-                android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp" />
 
 
-    </RelativeLayout>
+</RelativeLayout>
 
 
 
