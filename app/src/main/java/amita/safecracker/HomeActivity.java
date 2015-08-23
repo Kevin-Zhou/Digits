@@ -28,8 +28,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Space;
-
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
@@ -45,43 +43,23 @@ public class HomeActivity extends Activity {
     private static final String TWITTER_SECRET = "LQWF2vrV1e0bPzEfPVF8bLhBj6fstEQraSwGs8RrrjrkGcdZJz";
 
     Context context;//needed to start a new intent;
-    Button start;
-    Button multiplayer;
-    Button instructions;
+    ImageButton instructions;
+    ImageButton play;
+    ImageButton multiplayer;
     ImageView pic;
-    Space space1;
-    Space space2;
-    LinearLayout buttonsLayout;
-    int imageHeight;
+    LinearLayout linearLayout;
+
+int imageHeight;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_home);
-        start = (Button) findViewById(R.id.startGame);
-        multiplayer = (Button) findViewById(R.id.multiplayer);
-        instructions =(Button) findViewById(R.id.Instructions);
-        buttonsLayout=(LinearLayout) findViewById(R.id.buttonsLinearLayout);
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) buttonsLayout.getLayoutParams();
-        params.setMargins(0, 0, 0, (int) (getHeight() / 7));
-        buttonsLayout.setLayoutParams(params);
-        instructions.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
-        instructions.setHeight((int) ((100 / 720) * getHeight() * 0.5965202983));
-        multiplayer.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
-        multiplayer.setHeight((int) ((100 / 720) * getHeight() * 0.5965202983));
-        start.setWidth((int) ((100 / 720) * getHeight() * 0.5965202983));
-        start.setHeight((int) (( 100/ 720) * getHeight()*0.5965202983));
-        space1=(Space)(findViewById(R.id.space1));
-        space2=(Space)(findViewById(R.id.space2));
-        LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) space1.getLayoutParams();
-        params2.width=(int) (0.0416666667 * getWidth());
-        LinearLayout.LayoutParams params3 = (LinearLayout.LayoutParams) space2.getLayoutParams();
-        params3.width=(int) (0.0416666667 * getWidth());
-        System.out.println(getWidth());
-        instructions.setPadding((int) (0.00078125 * getHeight()), (int)(0.00078125*getHeight()),0, 0);
-        start.setPadding((int) (0.003125 * getHeight()), (int)(0.0015625*getHeight()),0,0);
-
+        instructions =(ImageButton) findViewById(R.id.instructions);
+        play = (ImageButton) findViewById(R.id.play);
+        multiplayer = (ImageButton) findViewById(R.id.multiplayer);
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
         context=this;//activity is a subclass of context
         Intent i = getIntent();
 
@@ -94,27 +72,25 @@ public class HomeActivity extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         //scale picture and text
         pic = (ImageView) findViewById(R.id.imageView3);
+        scaleImage(pic,metrics.widthPixels);
 
-        scaleImage(pic,(int)(getHeight()/(2)));
         //to center the pic in code
         ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(pic.getLayoutParams());
-
-        marginParams.setMargins((int)(0.05*getWidth()), (int)(0.15*getHeight()), (int)(0.05*getWidth()), (int)(0.05*getHeight()));
+        marginParams.setMargins((int)(0.25*getWidth()), (int)(0.17*getHeight()), (int)(0.25*getWidth()), (int)(0.2*getHeight()));
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(marginParams);
         //layoutParams.setMargins(0, (int)(0.08*getHeight()), 0, (int)(0.05*getHeight()));
         layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-
         //pic.setLayoutParams(marginParams);
         pic.setLayoutParams(layoutParams);
 
-
+        // To center the instructions/play/multiplayer buttons in code
+        RelativeLayout.LayoutParams buttonsLayoutParams = new RelativeLayout.LayoutParams(linearLayout.getLayoutParams());
+        buttonsLayoutParams.setMargins((int)(0.05*getWidth()), (int)(0.82*getHeight()), (int)(0.05*getWidth()), 0);
+        buttonsLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        linearLayout.setLayoutParams(buttonsLayoutParams);
 
         // Creating SETTINGS/SHARE buttons
         final ImageButton shareButton = (ImageButton)  findViewById(R.id.share);
-        RelativeLayout.LayoutParams params4 = (RelativeLayout.LayoutParams) shareButton.getLayoutParams();
-        params4.width=(int)(0.046875*getHeight());
-        params4.height=(int)(0.046875*getHeight());
-        params4.setMargins(0,(int)(0.046875*getHeight()),(int)(0.08333333*getWidth()),0);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -152,10 +128,6 @@ public class HomeActivity extends Activity {
             }
         });
         final ImageButton settingsButton = (ImageButton)  findViewById(R.id.setting);
-        RelativeLayout.LayoutParams params5 = (RelativeLayout.LayoutParams) settingsButton.getLayoutParams();
-        params5.width=(int)(0.046875*getHeight());
-        params5.height=(int)(0.046875*getHeight());
-        params5.setMargins((int) (0.08333333 * getWidth()), (int) (0.046875 * getHeight()), 0, 0);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -195,73 +167,11 @@ public class HomeActivity extends Activity {
 
 
         //creating the three INSTRUCTIONS/PLAY/MULTIPLAYER buttons
-        start.setTextSize((int) (0.025 * getWidth()));
-        start.setTypeface(tf_light);
-        start.setText(Html.fromHtml("&#9654;"));
-        start.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    try {
-                        new Thread(new Runnable() {
-                            public void run() {
-                                try {
-                                    // Play click sound effect
-                                    MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
-                                    click.start();
-                                    Thread.sleep(500);
-                                    click.release();
-                                } catch (IllegalStateException e) {
-
-                                } catch (InterruptedException e) {
-
-                                }
-                            }
-                        }).start();
-                    } catch (IllegalStateException e) {
-
-                    }
-                }
-                return false;
-            }
-        });
-        multiplayer.setTextSize((int) (0.025 * getWidth()));
-        multiplayer.setTypeface(tf_light);
-        multiplayer.setText(Html.fromHtml("&#128101;"));
-        multiplayer.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    try {
-                        new Thread(new Runnable() {
-                            public void run() {
-                                try {
-                                    // Play click sound effect
-                                    MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
-                                    click.start();
-                                    Thread.sleep(500);
-                                    click.release();
-                                } catch (IllegalStateException e) {
-
-                                } catch (InterruptedException e) {
-
-                                }
-                            }
-                        }).start();
-                    } catch (IllegalStateException e) {
-
-                    }
-                }
-                return false;
-            }
-        });
-        instructions.setTextSize((int) (0.025 * getWidth()));
-        instructions.setTypeface(tf_light);
-        instructions.setText(Html.fromHtml("&#9776;"));
         instructions.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    instructions.setImageResource(R.drawable.instructions_pressed);
                     try {
                         new Thread(new Runnable() {
                             public void run() {
@@ -281,6 +191,68 @@ public class HomeActivity extends Activity {
                     } catch (IllegalStateException e) {
 
                     }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    instructions.setImageResource(R.drawable.instructions);
+                }
+                return false;
+            }
+        });
+        play.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    play.setImageResource(R.drawable.play_pressed);
+                    try {
+                        new Thread(new Runnable() {
+                            public void run() {
+                                try {
+                                    // Play click sound effect
+                                    MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
+                                    click.start();
+                                    Thread.sleep(500);
+                                    click.release();
+                                } catch (IllegalStateException e) {
+
+                                } catch (InterruptedException e) {
+
+                                }
+                            }
+                        }).start();
+                    } catch (IllegalStateException e) {
+
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    play.setImageResource(R.drawable.play);
+                }
+                return false;
+            }
+        });
+        multiplayer.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    multiplayer.setImageResource(R.drawable.multiplayer_pressed);
+                    try {
+                        new Thread(new Runnable() {
+                            public void run() {
+                                try {
+                                    // Play click sound effect
+                                    MediaPlayer click = MediaPlayer.create(getApplicationContext(), R.raw.click);
+                                    click.start();
+                                    Thread.sleep(500);
+                                    click.release();
+                                } catch (IllegalStateException e) {
+
+                                } catch (InterruptedException e) {
+
+                                }
+                            }
+                        }).start();
+                    } catch (IllegalStateException e) {
+
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    multiplayer.setImageResource(R.drawable.multiplayer);
                 }
                 return false;
             }
@@ -288,13 +260,6 @@ public class HomeActivity extends Activity {
         click1();
         click2();
         click3();
-        //added code
-        start.setGravity(Gravity.CENTER);
-        start.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
-        instructions.setGravity(Gravity.CENTER);
-        instructions.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
-        multiplayer.setGravity(Gravity.CENTER);
-        multiplayer.setTextSize(TypedValue.COMPLEX_UNIT_PX, (float) (0.05 * imageHeight));
     }
 
     private void scaleImage(ImageView view, int boundBoxInDp)
@@ -362,7 +327,7 @@ public class HomeActivity extends Activity {
 
     public void click1() {
         //Select a specific button to bundle it with the action you want
-        start.setOnClickListener(new View.OnClickListener() {
+        play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent cal = new Intent(getApplicationContext(), Instructions5.class);
@@ -382,7 +347,7 @@ public class HomeActivity extends Activity {
                 Intent cal = new Intent(getApplicationContext(), Instructions2.class);
                 // passing array index
                 startActivity(cal);
-                // finish();
+               // finish();
             }
         });
     }

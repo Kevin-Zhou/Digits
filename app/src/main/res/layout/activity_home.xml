@@ -24,61 +24,50 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:id="@+id/buttonsLinearLayout">
+        android:id="@+id/linearLayout">
 
-        <Button
-            android:id="@+id/Instructions"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:text="Instructions"
-            android:background="@drawable/mybutton3"
-            android:layout_below="@+id/imageView3"
-            android:fontFamily="font"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:textAlignment="gravity"
-            android:textColor="#FF016CA2"
-            android:paddingTop="1px"
-            android:paddingLeft="1px" />
+        <ImageButton
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:src="@drawable/instructions"
+            android:layout_below="@+id/play"
+            android:layout_alignBaseline="@+id/imageView3"
+            android:id="@+id/instructions"
+            android:background="@drawable/mybutton4"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter" />
 
         <Space
             android:layout_width="20px"
             android:layout_height="20px"
             android:id="@+id/space1" />
 
-        <Button
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:text="Play"
-            android:layout_below="@+id/Instructions"
+        <ImageButton
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:src="@drawable/play"
+            android:layout_below="@+id/startGame"
             android:layout_alignBaseline="@+id/imageView3"
-            android:id="@+id/startGame"
-            android:background="@drawable/mybutton3"
+            android:id="@+id/play"
+            android:background="@drawable/mybutton4"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:textAlignment="gravity"
-            android:textColor="#FF016CA2"
-            android:paddingTop="2px"
-            android:paddingLeft="4px" />
+            android:scaleType="fitCenter" />
 
         <Space
             android:layout_width="20px"
             android:layout_height="20px"
             android:id="@+id/space2" />
 
-        <Button
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:text="Multi-Player"
+        <ImageButton
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:src="@drawable/multiplayer"
             android:layout_below="@+id/startGame"
             android:layout_alignBaseline="@+id/imageView3"
             android:id="@+id/multiplayer"
-            android:background="@drawable/mybutton3"
+            android:background="@drawable/mybutton4"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:textAlignment="gravity"
-            android:textColor="#FF016CA2"
-            android:elegantTextHeight="false" />
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
 

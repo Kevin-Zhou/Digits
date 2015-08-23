@@ -94,4 +94,4 @@
         android:elegantTextHeight="false"
         android:layout_alignBottom="@+id/imageView" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Amita/Documents/AndroidStudioProjects/Digits/Digits/app/src/main/res/layout/activity_blurred.xml -->
+</RelativeLayout><!-- From: file:/Users/acme_zx/AndroidStudioProjects/Digits/app/src/main/res/layout/activity_blurred.xml -->
