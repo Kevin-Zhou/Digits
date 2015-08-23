@@ -80,7 +80,7 @@ int imageHeight;
 
         //to center the pic in code
         ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(pic.getLayoutParams());
-        marginParams.setMargins((int)(0.25*getWidth()), (int)(0.17*getHeight()), (int)(0.25*getWidth()), (int)(0.2*getHeight()));
+        marginParams.setMargins((int)(0.27*getWidth()), (int)(0.18*getHeight()), (int)(0.27*getWidth()), (int)(0.2*getHeight()));
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(marginParams);
         //layoutParams.setMargins(0, (int)(0.08*getHeight()), 0, (int)(0.05*getHeight()));
         layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
@@ -95,6 +95,13 @@ int imageHeight;
 
         // Creating SETTINGS/SHARE buttons
         final ImageButton shareButton = (ImageButton)  findViewById(R.id.share);
+        //shareButton.setMaxHeight((int) (0.1 * getWidth()));
+        //shareButton.setMaxHeight((int) (0.1 * getWidth()));
+        // To center
+        RelativeLayout.LayoutParams shareLayoutParams = new RelativeLayout.LayoutParams(shareButton.getLayoutParams());
+        shareLayoutParams.setMargins(0, (int)(0.05*getWidth()), (int)(0.05*getWidth()), 0);
+        shareLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        shareButton.setLayoutParams(shareLayoutParams);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,6 +139,13 @@ int imageHeight;
             }
         });
         final ImageButton settingsButton = (ImageButton)  findViewById(R.id.setting);
+        //settingsButton.setMaxHeight((int) (0.1 * getWidth()));
+        //settingsButton.setMaxHeight((int) (0.1 * getWidth()));
+        // To center
+        RelativeLayout.LayoutParams settingsLayoutParams = new RelativeLayout.LayoutParams(settingsButton.getLayoutParams());
+        settingsLayoutParams.setMargins((int)(0.05*getWidth()), (int)(0.05*getWidth()), 0, 0);
+        settingsLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        settingsButton.setLayoutParams(settingsLayoutParams);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,12 +195,14 @@ int imageHeight;
         best.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.07 * imageHeight));
         // To center
         RelativeLayout.LayoutParams bestLayoutParams = new RelativeLayout.LayoutParams(best.getLayoutParams());
-        bestLayoutParams.setMargins((int)(0.05*getWidth()), (int)(0.05*getHeight()), (int)(0.05*getWidth()), 0);
+        bestLayoutParams.setMargins(0, (int)(0.06*getWidth()), 0, 0);
         bestLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
         best.setLayoutParams(bestLayoutParams);
 
 
         //creating the three INSTRUCTIONS/PLAY/MULTIPLAYER buttons
+        //instructions.setMaxHeight((int) (0.1 * getWidth()));
+        //instructions.setMinimumHeight((int)(0.1*getWidth()));
         instructions.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -217,6 +233,8 @@ int imageHeight;
                 return false;
             }
         });
+        //play.setMaxHeight((int)(0.1*getWidth()));
+        //play.setMinimumHeight((int)(0.1*getWidth()));
         play.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -247,6 +265,8 @@ int imageHeight;
                 return false;
             }
         });
+        //multiplayer.setMaxHeight((int)(0.1*getWidth()));
+        //multiplayer.setMinimumHeight((int)(0.1*getWidth()));
         multiplayer.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
