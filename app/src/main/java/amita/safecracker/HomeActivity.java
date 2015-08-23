@@ -28,6 +28,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
@@ -48,6 +50,8 @@ public class HomeActivity extends Activity {
     ImageButton multiplayer;
     ImageView pic;
     LinearLayout linearLayout;
+    TextView best;
+    SharedPreferences prefs;
 
 int imageHeight;
 
@@ -164,6 +168,22 @@ int imageHeight;
                 return false;
             }
         });
+
+
+        // Creating the "BEST" textview
+        best = (TextView) findViewById(R.id.best);
+        //This gets the shared preferences
+        prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+        //it will load the previous score
+        long score = prefs.getLong("key", 0); //0 is the default value
+        best.setText("BEST: " + score);
+        best.setTypeface(tf_light);
+        best.setTextSize(TypedValue.COMPLEX_UNIT_PX, (int) (0.07 * imageHeight));
+        // To center
+        RelativeLayout.LayoutParams bestLayoutParams = new RelativeLayout.LayoutParams(best.getLayoutParams());
+        bestLayoutParams.setMargins((int)(0.05*getWidth()), (int)(0.05*getHeight()), (int)(0.05*getWidth()), 0);
+        bestLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        best.setLayoutParams(bestLayoutParams);
 
 
         //creating the three INSTRUCTIONS/PLAY/MULTIPLAYER buttons
